@@ -29,7 +29,7 @@ for n in names {
 
 // prints each letter
 // ----------------------------------------------------------------------------
-for i: Character in "Swift".characters {
+for i: Character in "Swift" {
 	print(i)																		// o: prints S w i f t
 }
 
@@ -47,6 +47,12 @@ for count in stride(from: 11, to: 1, by: -2) {
 	print("\(count)")
 }
 
+
+// reverse for in loop
+// ----------------------------------------------------------------------------
+for reversedCount in (1...10).reversed() {
+  print("\(reversedCount)")
+}
 
 
 // while Loop
@@ -115,8 +121,10 @@ default:
 // ----------------------------------------------------------------------------
 switch dogInfo {
 case (let age, "Fido"):          // 1st tuple value bound in age
-	"Dat's Fido who is \(age)"
+	"That's Fido who is \(age)"
 case var (age, name):            // replaces default|assigns multiple
+  age += 1
+  name = "Fido2"
 	"My dog \(name) is \(age)"
 }
 
@@ -124,7 +132,7 @@ case var (age, name):            // replaces default|assigns multiple
 // switch with value bindings & where stmt
 // ----------------------------------------------------------------------------
 switch dogInfo {
-case let (age, name) where name == "fido":
+case let (_, name) where name == "fido":
 	"Is that fido?"
 case let (age, name) where age == 7:
 	"\(name) is \(age) years old"
@@ -159,7 +167,7 @@ for i in 1...10 {
 
 let puzzleInput = "great minds think alike"
 var puzzleOutput = ""
-for character in puzzleInput.characters {
+for character in puzzleInput {
 	switch character {
 	case "a", "e", "i", "o", "u", " ":
 		continue
