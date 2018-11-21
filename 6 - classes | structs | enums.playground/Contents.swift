@@ -969,7 +969,7 @@ class Circle {
 		return 2 * radius
 	}
 	func area() -> Double {
-		return M_PI * radius * radius
+		return .pi * radius * radius
 	}
 }
 
@@ -1094,7 +1094,7 @@ let custServ2 = Phone.tollFree(area: 888, xchg: 555, ext: 1212)
 switch custServ {
 case .tollFree(let ext, _, _):			// bind specific values
 	print("Toll-free, ext: \(ext)")
-case var .alphaPhone(a, b):					// bind in front to extract all
+case let .alphaPhone(a, b):					// bind in front to extract all
 	print("Named phone: \(a, b)")
 }
 
