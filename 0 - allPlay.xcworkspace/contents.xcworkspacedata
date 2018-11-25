@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:1 - data types.playground">
+   </FileRef>
+   <FileRef
+      location = "group:2 - operators.playground">
+   </FileRef>
+   <FileRef
+      location = "group:3 - control flow.playground">
+   </FileRef>
+   <FileRef
+      location = "group:4 - collection types.playground">
+   </FileRef>
+   <FileRef
+      location = "group:5 - functions | closures.playground">
+   </FileRef>
+   <FileRef
+      location = "group:6 - classes | structs | enums.playground">
+   </FileRef>
+   <FileRef
+      location = "group:7 - adv type functionality.playground">
+   </FileRef>
+   <FileRef
+      location = "group:8 - protocols | delegation.playground">
+   </FileRef>
+   <FileRef
+      location = "group:9 - additional.playground">
+   </FileRef>
+   <FileRef
+      location = "group:10 - debugging.playground">
+   </FileRef>
+   <FileRef
+      location = "group:11 - code samples.playground">
+   </FileRef>
+   <FileRef
+      location = "group:12 - future use.playground">
+   </FileRef>
+</Workspace>
