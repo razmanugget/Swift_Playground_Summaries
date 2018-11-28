@@ -2,7 +2,7 @@ import UIKit
 
 
 // OPERATORS
-// assignment
+// assignment 
 // ----------------------------------------------------------------------------
 var a = 1											// assigns a variable
 var b = a											// assigns a constant
