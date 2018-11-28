@@ -416,7 +416,7 @@ if personalSite != nil {
 // with ?? operator
 var website2 = personalSite ?? defaultSite
 
-/*
+/* 
  // working with Obj-C arrays
  // ----------------------------------------------------------------------------
  var whatVar:Any
