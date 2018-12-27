@@ -36,7 +36,9 @@ for (key, value) in languageSkills {print("language: \(key), ability: \(value)")
 lyfeBug.printList()
 readyToHire = true
 
+
+
 //if readyToHire == true ?? false
-readyToHire ? ((print("Yes") : print("No"))
+//readyToHire ? ((print("Yes") : print("No"))
 
 
