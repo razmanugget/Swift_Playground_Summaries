@@ -1,7 +1,7 @@
 import UIKit
 
 // copy and run in Xcode playground for better formatting
-var readyToHire: Bool
+var readyToHire: Bool?
 var techSkills = ["Swift 4.2":7, "iOS 12":5, "OOP": 6, "Git, GitHub Desktop":7, "UI UX Design":7, "Photoshop":7, "Sketch":8, "Mac WindowsOS":9, "Word Excel Powerpoint":7, "HTML CSS":5, "WordPress":4, "JavaScript":2]
 var businessSkills = ["Project Management": 7, "Agile Scrum": 3, "Public Speaking": 7, "Copywriting": 9, "Accounting": 7, "Cost Benefit Analysis": 7, "Empathy": 10]
 var languageSkills = ["English (native speaker)": 10, "French": 5, "Japanese": 3, "Polish": 1]
@@ -34,11 +34,10 @@ for (key, value) in businessSkills {print("skill: \(key), ability: \(value)")}
 for (key, value) in languageSkills {print("language: \(key), ability: \(value)")}
 
 lyfeBug.printList()
-readyToHire = true
 
-
-
-//if readyToHire == true ?? false
-//readyToHire ? ((print("Yes") : print("No"))
-
-
+var hiringDecision = readyToHire ?? true
+if hiringDecision == true {
+  print("Phone: +48 532 364 660\nEmail: rami_s@hotmail.com")
+} else {
+  print("Does not compute...")
+}
