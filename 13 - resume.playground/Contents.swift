@@ -12,10 +12,8 @@ struct Experience {
   var responsibleFor: [String]
   
   init(title: String, location: String, yearStart: Int, yearEnd: Int, responsibleFor: [String]) {
-    self.title = title
-    self.location = location
-    self.yearStart = yearStart
-    self.yearEnd = yearEnd
+    self.title = title;               self.location = location
+    self.yearStart = yearStart;       self.yearEnd = yearEnd
     self.responsibleFor = responsibleFor
   }
   
@@ -38,6 +36,4 @@ lyfeBug.printList()
 var hiringDecision = readyToHire ?? true
 if hiringDecision == true {
   print("Phone: +48 532 364 660\nEmail: rami_s@hotmail.com")
-} else {
-  print("Does not compute...")
-}
+} else { print("Does not compute...") }
