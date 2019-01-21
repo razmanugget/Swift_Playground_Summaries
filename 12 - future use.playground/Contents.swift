@@ -98,3 +98,27 @@ let dell = Experience(title: "Finance Intranet Site Manager", location: "Austin,
  Japanese – Southern Illinois University  Nakajo, Japan 1993
  */
 
+    // subscripts - simplified example with no error handling
+// ----------------------------------------------------------------------------
+struct Matrix {
+    var rows: Int, columns: Int
+    var grid: [Double]
+    
+    init(rows: Int, columns: Int) {
+        self.rows = rows
+        self.columns = columns
+        grid = Array(repeating: 0.0, count: rows * columns)
+    }
+    
+    subscript(row: Int, column: Int) -> Double {
+        get {
+            return grid[(row * columns) + column]
+        }
+        set {
+            grid[(row * columns) + column] = newValue
+        }}}
+var matrix = Matrix(rows: 2, columns: 2)
+
+matrix[0, 1] = 1.4
+
+

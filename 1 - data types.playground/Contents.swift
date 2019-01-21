@@ -89,16 +89,16 @@ var animal = "bear", bird = "crane"
 var greeting = "Hello, "
 var cat = "Whiskers meow meow"
 
-print (greeting + cat + ".")          // concatenation
-cat.append(myChar)										// concatenation with char
-print ("My cat's name is \(cat)")			// interpolation
-greeting += cat                       // add & assign to existing string
+print (greeting + cat + ".")            // concatenation
+cat.append(myChar)						// concatenation with char
+print ("My cat's name is \(cat)")		// interpolation
+greeting += cat                         // add & assign to existing string
 
 
 // iterating thru each character of name
 // ----------------------------------------------------------------------------
 for catChars in cat {
-  print(catChars)                    // prints -> Whiskers meow meow!
+  print(catChars)                       // prints -> Whiskers meow meow!
 }
 
 let reversed = String(cat.reversed())   // reverses letters
@@ -146,7 +146,7 @@ if bookTitle.hasSuffix("Sea") {
 // separating strings based on components
 // ----------------------------------------------------------------------------
 var titleBreakdown = bookTitle.components(separatedBy: " ")
-print(titleBreakdown)									// = array: 2000, Leagues, Under..
+print(titleBreakdown)					// = array: 2000, Leagues, Under..
 
 
 // select characters
@@ -174,7 +174,7 @@ if cat.isEmpty {
 // change case
 cat.uppercased()                  // converts all chars to upper
 cat.lowercased()                  // converts all chars to lower
-cat.capitalized                    // capitalize each char before a space
+cat.capitalized                   // capitalize each char before a space
 
 
 // long strings

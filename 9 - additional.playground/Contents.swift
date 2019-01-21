@@ -156,7 +156,7 @@ struct Stack<T> {
 var myIntStack = Stack<Int>()
 var myStringStack = Stack<String>()
 
-/*
+
 // protocol with associated type -----------------------------
 protocol Returnable {
    typealias ItemType
@@ -212,7 +212,7 @@ p!.name = "Cook Dinner"
 let taskNames = ["Choose Menu", "Buy Groceries", "Cook Food"]
 
 for name in taskNames {
-   var t = Task()
+    let t = Task()
    t.name = name
    t.parent = p
    p!.listOfTasks.append(t)
@@ -221,4 +221,37 @@ for name in taskNames {
 p = nil
 // -----------------------------------------------------------
 
-*/
+
+// nested functions (other example)
+// ----------------------------------------------------------------------------
+func bankVault(passcode:String) -> String {
+    func openBankVault() -> String {
+        return "Vault opened"
+    }
+    func closeBankVault() -> String {
+        return "Vault closed"
+    }
+    if passcode == "secret" {
+        return openBankVault()
+    }
+    else {
+        return closeBankVault()
+    }}
+
+bankVault(passcode: "wrongsecret")               // o: closed
+bankVault(passcode: "secret")                    // o: open
+
+
+
+// key-value observing (KVO)
+// ----------------------------------------------------------------------------
+@objc class ObservePerson: NSObject {
+    @objc dynamic var name = "Taylor Swift"
+}
+let taylor = ObservePerson()
+
+taylor.observe(\ObservePerson.name, options: .new) { person, change in
+    print("I'm now called \(person.name)")
+}
+
+taylor.name = "Justin Bieber"         //o: I'm now called Justin B
