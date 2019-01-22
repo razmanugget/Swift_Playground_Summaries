@@ -47,30 +47,37 @@ class GuessStatisticsMessage {
     var word: String
     var letter: Character
 
-    lazy var number: String
-    lazy var verb: String
-    lazy var pluralModifier: String
+    var number: String {
+        get {
+            return createPluralDependentMessageParts(letter: Character)
+        }
+        set {
 
-    init(number: String,
-         verb: String,
-         pluralModifier: String) {
-        self.number = number
-        self.verb = verb
-        self.pluralModifier = pluralModifier
+        }
+
+    }
+    var verb: String
+    var pluralModifier: String
+
+    init(word: String,
+         letter: Character
+        ) {
+        self.word = word
+        self.letter = letter
     }
 
-    func make(candidate: Character, letters: Int) -> String {
-        createPluralDependentMessageParts(letters: letters)
+    func make(candidate: Character, letter: Int) -> String {
+        createPluralDependentMessageParts(letter: letter)
         return ("There \(verb) \(number) letter\(pluralModifier).")
     }
 
-    func createPluralDependentMessageParts(letters: Int) -> () {
-        if (letters == 0) {
+    func createPluralDependentMessageParts(letter: Int) -> () {
+        if (letter == 0) {
             thereAreNoLetters()
-        } else if (letters == 1) {
+        } else if (letter == 1) {
             thereIsOneLetter()
         } else {
-            thereAreManyLetters(letters: letters)
+            thereAreManyLetters(letters: letter)
         }
     }
 
@@ -95,5 +102,5 @@ word.countInstances(of: candidate)
     }
 }
 
-var wordCount = GuessStatisticsMessage(number: <#T##String#>, verb: <#T##String#>, pluralModifier: <#T##String#>)
+var wordCount = GuessStatisticsMessage(word: "hello", letter: "l")
 

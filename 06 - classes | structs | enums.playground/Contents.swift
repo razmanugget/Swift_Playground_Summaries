@@ -167,11 +167,12 @@ counter.reset()																// o: 0
 // modifying value types within methods (mutating func)
 // ----------------------------------------------------------------------------
 struct Mutation {
-	var number = 7													// can't change w/o mutating
+	var number = 7							// can't change w/o mutating
 	
 	mutating func multiplyBy(value: Int) {
 		number *= value
-	}}
+	}
+}
 var myMutate = Mutation()
 
 myMutate.multiplyBy(value: 5)							// can use func directly
