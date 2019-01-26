@@ -100,5 +100,19 @@ print("Hello, World.")
 print(inputString)
 
 // Day 1 - HackerRank
+var i = 4
+var d = 4.0
+var s = "HackerRank "
 
+var secondInt: Int
+var secondDouble: Double
+var secondString: String
+
+secondInt = Int(readLine()!)!
+secondDouble = Double(readLine()!)!
+secondString = readLine()!
+
+print(i + secondInt)
+print(d + secondDouble)
+print(s + secondString)
 
