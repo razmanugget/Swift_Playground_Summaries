@@ -42,20 +42,14 @@ printGuessStatistics(word: "bazooka forest ranger", letter: "r")
 
 
 // not fixed nor working
-// Listing 2-2 Variables have a context (good) -> changed program to spell out numbers
+// Listing 2-2 Variables have a context (good)
 class GuessStatisticsMessage {
     var word: String
     var letter: Character
 
-    var number: String {
-        get {
-            return createPluralDependentMessageParts(letter: Character)
-        }
-        set {
+    lazy var letterCount: Int = word.countInstances(of: letter)
+    lazy var number: String = createPluralDependentMessageParts(letterCount: Int)
 
-        }
-
-    }
     var verb: String
     var pluralModifier: String
 
@@ -67,24 +61,22 @@ class GuessStatisticsMessage {
     }
 
     func make(candidate: Character, letter: Int) -> String {
-        createPluralDependentMessageParts(letter: letter)
+        createPluralDependentMessageParts(letterCount: Int)
         return ("There \(verb) \(number) letter\(pluralModifier).")
     }
 
-    func createPluralDependentMessageParts(letter: Int) -> () {
-        if (letter == 0) {
+    func createPluralDependentMessageParts(letterCount: Int) -> () {
+        if (letterCount == 0) {
             thereAreNoLetters()
-        } else if (letter == 1) {
+        } else if (letterCount == 1) {
             thereIsOneLetter()
         } else {
-            thereAreManyLetters(letters: letter)
+            thereAreManyLetters(letters: letterCount)
         }
     }
 
-word.countInstances(of: candidate)
-
     func thereAreManyLetters(letters: Int) -> () {
-        number = (letters).count
+        number = String(letterCount)
         verb = "are"
         pluralModifier = "s"
     }
@@ -103,4 +95,5 @@ word.countInstances(of: candidate)
 }
 
 var wordCount = GuessStatisticsMessage(word: "hello", letter: "l")
+print(wordCount)
 
