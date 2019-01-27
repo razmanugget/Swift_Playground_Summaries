@@ -1,5 +1,6 @@
 import UIKit
-// algorithm practice
+// HankerRank algorithm practice
+
 
 // does a number exist in an array
 func findNumber(arr: [Int], k: Int) -> String {
@@ -12,7 +13,6 @@ func findNumber(arr: [Int], k: Int) -> String {
 }
 let newArray: [Int] = [1 ,2 ,3 ,4 ,5]
 let stdout = findNumber(arr: newArray, k: 4)
-
 
 
 // print oddnumbers between a range
@@ -49,6 +49,7 @@ var res = oddNumbers(l: l, r: r)
 //func commonSubstring(a: [String], b: [String]) -> Void {
 //
 //}
+
 
 // wtf?
 //var a = "hello"
@@ -90,29 +91,70 @@ return(countDupes)
 
 var newCount = countDuplicates(numbers: numbers)
 
-// Day 0 - HackerRank
-let inputString = readLine()! // get a line of input from stdin and save it to our variable
 
-// Your first line of output goes here
-print("Hello, World.")
+// HackerRank - Tutorial to read input data
+//scan: Scanner = new Scanner(System.in) // open scanner
+//var s = scan.next() // read the next token and save it to 's'
+//scan.close() // close scanner
+//prinn(s) // print 's'
 
-// Write the second line of output
-print(inputString)
 
-// Day 1 - HackerRank
-var i = 4
-var d = 4.0
-var s = "HackerRank "
+// Day 0 - HackerRank - needs input, so run in hackerrank only
+//let inputString = readLine()! // get a line of input from stdin and save it to our variable
+//
+//// Your first line of output goes here
+//print("Hello, World.")
+//
+//// Write the second line of output
+//print(inputString)
 
-var secondInt: Int
-var secondDouble: Double
-var secondString: String
 
-secondInt = Int(readLine()!)!
-secondDouble = Double(readLine()!)!
-secondString = readLine()!
+// Day 1 - HackerRank - needs input, so run in hackerrank only
+//var i = 4
+//var d = 4.0
+//var s = "HackerRank "
+//
+//var secondInt: Int
+//var secondDouble: Double
+//var secondString: String
+//
+//secondInt = Int(readLine()!)!
+//secondDouble = Double(readLine()!)!
+//secondString = readLine()!
+//
+//print(i + secondInt)
+//print(d + secondDouble)
+//print(s + secondString)
 
-print(i + secondInt)
-print(d + secondDouble)
-print(s + secondString)
 
+// Day 2 - HackerRank - needs input, so run in hackerrank only
+func solve(meal_cost: Double, tip_percent: Int, tax_percent: Int) -> Void {
+    var totalMealCost: Double
+    let minimumToPay: Double
+
+    let tip = tipCalc(meal_cost: meal_cost, tip_percent: tip_percent)
+    let tax = taxCalc(meal_cost: meal_cost, tax_percent: tax_percent)
+    totalMealCost = meal_cost + tip + tax
+    minimumToPay = (meal_cost + Double(tax))
+
+    // don't be cheap and make the waiter pay for tax and rounding!
+    if minimumToPay > Double(Int(totalMealCost)) {
+        totalMealCost += 0.0
+    }
+    print(Int(round(totalMealCost)))
+}
+
+func tipCalc(meal_cost: Double, tip_percent: Int) -> Double {
+    return(meal_cost * (Double(tip_percent)/100))
+}
+
+func taxCalc(meal_cost: Double, tax_percent: Int) -> Double {
+    return(meal_cost * (Double(tax_percent)/100))
+}
+
+// remove this for submission
+var meal_cost = 3.20
+var tip_percent = 20
+var tax_percent = 8
+
+solve(meal_cost: meal_cost, tip_percent: tip_percent, tax_percent: tax_percent)
