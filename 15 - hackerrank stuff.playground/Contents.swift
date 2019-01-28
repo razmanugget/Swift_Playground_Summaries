@@ -158,3 +158,22 @@ var tip_percent = 20
 var tax_percent = 8
 
 solve(meal_cost: meal_cost, tip_percent: tip_percent, tax_percent: tax_percent)
+
+// Day 3 - HackerRank - conditional stmts
+// this line from HackerRank
+//guard let N = Int((readLine()?.trimmingCharacters(in: .    else { fatalError("Bad input") }
+//whitespacesAndNewlines))!)
+let N = 6
+
+if N % 2 == 0 {
+    switch N {
+    case 2...5:
+        print("Not Weird")
+    case 6...20:
+        print("Weird")
+    default:
+        print("Not Weird")
+    }
+} else {
+    print("Weird")
+}
