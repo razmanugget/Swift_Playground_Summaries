@@ -186,7 +186,7 @@ class Person {
     init(initialAge: Int) {
         if initialAge <= 0 {
             age = 0
-            print("Age is not valid, setting age to 0..")
+            print("Age is not valid, setting age to 0.")
         } else {
             age = initialAge
         }
@@ -194,11 +194,11 @@ class Person {
 
     func amIOld() {
         if age < 13 {
-            print("You are young..")
+            print("You are young.")
         } else if age >= 13 && age < 18 {
-            print("You are a teenager")
+            print("You are a teenager.")
         } else {
-            print("You are old..")
+            print("You are old.")
         }
     }
 
@@ -207,7 +207,7 @@ class Person {
     }
 }
 
-let age = 41
+let age = -1
 let p = Person(initialAge: age)
 
 p.amIOld()
