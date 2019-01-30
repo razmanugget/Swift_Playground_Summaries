@@ -211,9 +211,14 @@ let age = -1
 let p = Person(initialAge: age)
 
 p.amIOld()
-
 for _ in 1...3 {
     p.yearPasses()
 }
 
-p.amIOld()
+// Day 5 - HackerRank - loops
+let newLoop = 5
+
+for i in 1...10 {
+    print("\(newLoop) x \(i) = \(i * newLoop)")
+}
+
