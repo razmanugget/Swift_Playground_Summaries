@@ -231,7 +231,7 @@ func printEvenAndOdd(string: String) {
     fputs("string: " + string + "\n", stderr)
 
     // Print the even-indexed characters
-    let x 
+    let x
 
     // Write your code here
 
@@ -250,3 +250,17 @@ for _ in 1...numStrings {
     let inputString = readLine()!
     printEvenAndOdd(string: inputString)
 }
+
+
+// Day 7 - HackerRank - arrays
+//guard let n = Int((readLine()?.trimmingCharacters(in: .whitespacesAndNewlines))!)
+//    else { fatalError("Bad input") }
+//
+//guard let arrTemp = readLine() else { fatalError("Bad input") }
+//let arr: [Int] = arrTemp.split(separator: " ").map {
+//    if let arrItem = Int($0.trimmingCharacters(in: .whitespacesAndNewlines)) {
+//        return arrItem
+//    } else { fatalError("Bad input") }
+//}
+//
+//guard arr.count == n else { fatalError("Bad input") }
