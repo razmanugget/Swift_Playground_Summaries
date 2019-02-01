@@ -231,12 +231,15 @@ func printEvenAndOdd(string: String) {
     fputs("string: " + string + "\n", stderr)
 
     // Print the even-indexed characters
+    let x 
+
     // Write your code here
 
     // Print a space
     print(" ", terminator: "")
 
     // Print the odd-indexed characters
+
     // Write your code here
 
     // Print a newline
