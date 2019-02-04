@@ -223,33 +223,30 @@ for i in 1...10 {
 }
 
 
-// Day 6 - HackerRank - review
-let numStrings = "Hacker Rank"
+// Day 6 - HackerRank - review -> create an array from a string, then print even, then odd chars
+let stringToRead = "Rank"
 
-//func printEvenAndOdd(string: String) {
-//    // This prints inputString to stderr for debugging:
-//    fputs("string: " + string + "\n", stderr)
-//
-//    // Print the even-indexed characters
-//    let x
-//
-//    // Write your code here
-//
-//    // Print a space
-//    print(" ", terminator: "")
-//
-//    // Print the odd-indexed characters
-//
-//    // Write your code here
-//
-//    // Print a newline
-//    print()
-//}
-//
-//for _ in 1...numStrings {
-//    let inputString = readLine()!
-//    printEvenAndOdd(string: inputString)
-//}
+func printEvenAndOdd(string: String) {
+    let stringArray = Array(stringToRead)
+
+    // print even
+    for even in stride(from: 0, to: stringToRead.count, by: 2) {
+        print(stringArray[even], terminator: "")
+    }
+
+    // print a space
+    print(" ", terminator: "")
+
+    // print odd
+    for odd in stride(from: 1, to: stringToRead.count, by: 2) {
+        print(stringArray[odd], terminator: "")
+    }
+
+    // print newline
+    print()
+}
+
+printEvenAndOdd(string: stringToRead)
 
 
 // Day 7 - HackerRank - reversing an array
