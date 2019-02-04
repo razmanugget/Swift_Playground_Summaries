@@ -252,15 +252,11 @@ let numStrings = "Hacker Rank"
 //}
 
 
-// Day 7 - HackerRank - arrays
-guard let n = Int((readLine()?.trimmingCharacters(in: .whitespacesAndNewlines))!)
-    else { fatalError("Bad input") }
+// Day 7 - HackerRank - reversing an array
+let arrToReverse = [10,305,52,6,2119]
 
-guard let arrTemp = readLine() else { fatalError("Bad input") }
-let arr: [Int] = arrTemp.split(separator: " ").map {
-    if let arrItem = Int($0.trimmingCharacters(in: .whitespacesAndNewlines)) {
-        return arrItem
-    } else { fatalError("Bad input") }
+for number in arrToReverse.reversed() {
+    print(number, terminator: "")
+    print(" ", terminator: "")
 }
 
-guard arr.count == n else { fatalError("Bad input") }
