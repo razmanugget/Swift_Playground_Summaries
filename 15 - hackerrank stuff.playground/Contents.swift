@@ -257,3 +257,36 @@ for number in arrToReverse.reversed() {
     print(" ", terminator: "")
 }
 
+
+// Day 8 - HackerRank - dictionaries and maps
+
+//while (count < n) {
+//    let person: String? = readLine()
+//    if (person != nil) {
+//        //... your code
+//    } else { // readLine() get nil - stop loop
+//        break
+//    }
+//}
+
+// very close
+//let n = Int(readLine()!)!
+//
+//var phoneBook = [String: Int]()
+//
+//for _ in 0...n - 1 {
+//    // read contacts into phone book
+//    var contact = readLine()!.components(separatedBy: " ")
+//    phoneBook[contact[0]] = contact[1]
+//}
+//
+//var queryName = readLine()
+//while queryName != nil {
+//    if let number = phoneBook[queryName!] {
+//        print("\(queryName!)=\(phoneBook[queryName!]!)")
+//    }
+//    else {
+//        print("Not found")
+//    }
+//    queryName = readLine()
+//}
