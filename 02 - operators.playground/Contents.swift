@@ -20,8 +20,8 @@ var result = Double(quantity) * unitPrice
 
 // modulus % | remainder operator
 // ----------------------------------------------------------------------------
-var remainderUnits = -9 % 4											// r: -1
-var f = d.truncatingRemainder(dividingBy: 2)		// r: 1 (5 % 2)
+var remainderUnits = -9 % 4											  // r: -1
+var f = d.truncatingRemainder(dividingBy: 2.0)		// r: 1 (5.0 % 2)
 
 
 // comparison
@@ -126,7 +126,11 @@ let doubleStr = String(format: "%.1f", testNumber)
 
 // math
 // ----------------------------------------------------------------------------
-let absolute = abs(testNumber)
+let absolute = abs(testNumber)        // o: 37
+(4.0).squareRoot()                    // o: 2
+max(5, 10)                            // o: 10
+min(-5, -10)                          // o: -10
+print(Double.pi)                      // o: 3.141592653589...
 
 
 
