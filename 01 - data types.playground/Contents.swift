@@ -96,6 +96,16 @@ print ("My cat's name is \(cat)")		// interpolation
 greeting += cat                         // add & assign to existing string
 
 
+// multi-line strings
+// ----------------------------------------------------------------------------
+let bigString = """
+This string contains
+multiple lines
+by using 3 
+double quote signs.
+"""
+
+
 // iterating thru each character of name
 // ----------------------------------------------------------------------------
 for catChars in cat {
