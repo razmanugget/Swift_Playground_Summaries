@@ -106,12 +106,14 @@ let f1:Float = 9.99
 
 let i1 = Int(f1)     // r: i1 = 9, round down
 let d1 = Double(f1)  // r: 9.98999
-//let b1 = Bool(f1)    // r: true, only 0 = false
+//let b1 = Bool(0)    // r: true, only 0 = false
 let s1 = String(f1)  // r: "9.99"
 
 let s2 = "howdy"
 var i2 = Int(s2)     // r: Optional (nil)
 var d2 = Double(s1)  // r: 9.99 but if string, then (nil)
+
+let actuallyDouble = 3 as Double
 // -------------------------------------------------
 
 
