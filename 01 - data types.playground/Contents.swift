@@ -96,14 +96,18 @@ print ("My cat's name is \(cat)")		// interpolation
 greeting += cat                         // add & assign to existing string
 
 
-// multi-line strings
+// multi-line
 // ----------------------------------------------------------------------------
-let bigString = """
-This string contains
-multiple lines
-by using 3 
-double quote signs.
+let longString = """
+When you write a string that spans multiple
+lines make sure you start its content on a
+line all of its own, and end it with three
+quotes also on a line of their own.
+Multi-line strings also let you write "quote marks"
+freely inside your strings, which is great!
 """
+
+print(longString)
 
 
 // iterating thru each character of name
@@ -187,19 +191,6 @@ cat.uppercased()                  // converts all chars to upper
 cat.lowercased()                  // converts all chars to lower
 cat.capitalized                   // capitalize each char before a space
 
-
-// long strings
-// ----------------------------------------------------------------------------
-let longString = """
-When you write a string that spans multiple
-lines make sure you start its content on a
-line all of its own, and end it with three
-quotes also on a line of their own.
-Multi-line strings also let you write "quote marks"
-freely inside your strings, which is great!
-"""
-
-print(longString)
 
 
 // TUPLES
