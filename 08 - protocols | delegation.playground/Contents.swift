@@ -66,10 +66,11 @@ let items: [Rentable] = [brownBear, clue, incubus]
 for item in items {
    print("Item: \(item.title) is rentable.  Barcode is \(item.barcode)")
 }
-// -------------------------------------------------
 
 
-// protocol as a type with inheritance -------------
+
+// protocol as a type with inheritance 
+// ----------------------------------------------------------------------------
 protocol Rentable2 {
    var title:String {get}
    var barcode:String {get set}
@@ -123,19 +124,18 @@ let items2: [Rentable2] = [brownBear2, clue2, incubus2]
 for item in items2 {
    print("Item: \(item.title) is rentable.  Barcode is \(item.barcode)")
 }
-// -------------------------------------------------
 
 
-// protocol composition ----------------------------
-/*
-func SomeMethod(composedProperty: protocol<ProtocolOne,
-   ProtocolTwo>) {}
-*/
-
-// -------------------------------------------------
+// protocol composition 
+// ----------------------------------------------------------------------------
+//func SomeMethod(composedProperty: protocol<ProtocolOne,
+//   ProtocolTwo>) {}
 
 
-// protocol optionals ------------------------------
+
+
+// protocol optionals
+// ----------------------------------------------------------------------------
 /* fix for swift 3.0
 @objc protocol BJMAnnotation: NSObjectProtocol {
    var coordinate: CLLocationCoordinate2D {get}
@@ -144,10 +144,9 @@ func SomeMethod(composedProperty: protocol<ProtocolOne,
 }*/
 
 
-// -------------------------------------------------
 
-
-// Delegation --------------------------------------
+// Delegation 
+// ----------------------------------------------------------------------------
 protocol TaskDelegate {
    func taskStatusHasChanged(task:Task, done:Bool)
 }
@@ -186,10 +185,11 @@ for name in taskNames {
 }
 
 p.listOfTasks[0].done = true
-// -------------------------------------------------
 
 
-// delegation other example ------------------------
+// delegation other example 
+// ----------------------------------------------------------------------------
+
 protocol ButtonDelegateProtocol {
    func didTapButton(button: Button)
 }
@@ -214,10 +214,10 @@ class Button {
 
 let button = Button(title: "Tap Me!", delegate: ButtonDelegate())
 button.buttonTapped()      //
-// -------------------------------------------------
 
 
-// delegation - Legend of Zelda --------------------
+// delegation - Legend of Zelda
+// ----------------------------------------------------------------------------
 protocol Healable {
    var healableName: String {get}
    var heartsRestores: Double {get}
