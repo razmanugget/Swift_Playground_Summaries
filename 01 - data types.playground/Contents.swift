@@ -2,7 +2,6 @@ import UIKit
 
 
 // comments
-
 // ----------------------------------------------------------------------------
 // this is a single line comment
 /*
@@ -45,13 +44,18 @@ var isOrange: Bool                  // create but don't initialize
 // create and initialize with an initial value
 var isApple = true
 
+// determine equality and assign value to constant
+let guess = "dog"
+let dogEqualsCat = guess == "cat"   // o: false
+
+
 
 
 // NUMBERS
 // declaration
 // ----------------------------------------------------------------------------
 var myVariable1: Int                // create but don't initialize
-var myVariable2 = Int()             // create/init with a 0/"" value
+var myVariable2 = Int()             // create/init with 0 value
 
 // create and initialize with an initial value
 var myVariable3 = 24                // preferred
@@ -91,8 +95,8 @@ var greeting = "Hello, "
 var cat = "Whiskers meow meow"
 
 print (greeting + cat + ".")            // concatenation
-cat.append(myChar)						// concatenation with char
-print ("My cat's name is \(cat)")		// interpolation
+cat.append(myChar)						          // concatenation with char
+print ("My cat's name is \(cat)")		    // interpolation
 greeting += cat                         // add & assign to existing string
 
 
