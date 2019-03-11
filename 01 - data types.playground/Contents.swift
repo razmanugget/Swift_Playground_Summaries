@@ -48,6 +48,16 @@ var isApple = true
 let guess = "dog"
 let dogEqualsCat = guess == "cat"   // o: false
 
+let myAge = 30
+let isTeenager = myAge >= 13 && myAge <= 19   // o: false
+
+
+// toggle a state change
+var switchState = true
+switchState.toggle()                // o: false
+
+
+
 
 
 

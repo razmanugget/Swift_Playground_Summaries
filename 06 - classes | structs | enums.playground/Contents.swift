@@ -243,6 +243,9 @@ let hand = Hand()
 hand[4] = "pinkie"
 print(hand[2])																	// o: middle
 
+func nada(this: NSString , that: NSString ) -> Int {
+  return (1)
+}
 
 // turning the subscript into a basic array
 // ----------------------------------------------------------------------------
