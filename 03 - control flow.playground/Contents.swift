@@ -14,8 +14,8 @@ for _ in 1...5 {
 	print("Hello")															// o: "Hello" 5x
 }
 
+// populate an array with 1-50
 var cellContent = [Int]()
-
 for i in 1...50 {
 	cellContent.append(i)
 }
