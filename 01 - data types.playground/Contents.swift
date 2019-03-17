@@ -1,8 +1,8 @@
 import UIKit
 
+// ----------------------------------------------------------------------------
 
 // comments
-// ----------------------------------------------------------------------------
 // this is a single line comment
 /*
 		this is a multi-line comment
@@ -10,7 +10,6 @@ import UIKit
 
 
 // landmarks
-// ----------------------------------------------------------------------------
 // MARK: -
 // MARK: - <Title> -
 // TODO: <Title>
@@ -18,7 +17,6 @@ import UIKit
 
 
 // Markdown example
-// ----------------------------------------------------------------------------
 /// # nada - The useless method
 /// ---
 /// This method really doesn't do anything at all useful.
@@ -30,6 +28,8 @@ import UIKit
 /// ```swift
 /// let one = nada("blah", "blah")
 /// NSLog("\(one)")
+
+// click nada while holding option key
 func nada(this: NSString , that: NSString ) -> Int {
   return (1)
 }
@@ -37,9 +37,10 @@ func nada(this: NSString , that: NSString ) -> Int {
 
 
 // BOOLS
-// declaration
 // ----------------------------------------------------------------------------
-var isOrange: Bool                  // create but don't initialize
+
+// declaration -> create but don't initialize
+var isOrange: Bool
 
 // create and initialize with an initial value
 var isApple = true
