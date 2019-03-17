@@ -2,15 +2,15 @@ import UIKit
 import Foundation
 
 // CONTROL FLOW
-// basic for-in loop
 // ----------------------------------------------------------------------------
+// basic for-in loop -> prints #'s
 for i in 1...10 {
-	print("i = \(i)")														// o: prints #'s
+	print("i = \(i)")
 }
 
-// no counter access, just loops
+// no counter access, just loops -> Hello 5x
 for _ in 1...5 {
-	print("Hello")															// o: "Hello" 5x
+	print("Hello")
 }
 
 // populate an array with 1-50
@@ -22,7 +22,7 @@ for i in 1...50 {
 // prints each name
 let names = ["Jim", "John", "Jill"]
 for n in names {
-	print(n)																		// o: prints each name
+	print(n)
 }
 
 // prints each letter -> S w i f t
