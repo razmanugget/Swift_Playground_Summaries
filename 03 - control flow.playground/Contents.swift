@@ -9,7 +9,6 @@ for i in 1...10 {
 }
 
 // no counter access, just loops
-// ----------------------------------------------------------------------------
 for _ in 1...5 {
 	print("Hello")															// o: "Hello" 5x
 }
@@ -20,18 +19,15 @@ for i in 1...50 {
 	cellContent.append(i)
 }
 
-
 // prints each name
-// ----------------------------------------------------------------------------
 let names = ["Jim", "John", "Jill"]
 for n in names {
 	print(n)																		// o: prints each name
 }
 
-// prints each letter
-// ----------------------------------------------------------------------------
+// prints each letter -> S w i f t
 for i: Character in "Swift" {
-	print(i)																		// o: prints S w i f t
+	print(i)
 }
 
 
