@@ -96,6 +96,7 @@ let longNumber = 1_000_000
 
 // declaration - create but don't initialize
 var myString1: String
+
 // declaration - create/init with 0 value
 var myString2 = String()
 
