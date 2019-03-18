@@ -108,18 +108,20 @@ var animal = "bear", bird = "crane"
 
 
 // combining
-// ----------------------------------------------------------------------------
 var greeting = "Hello, "
 var cat = "Whiskers meow meow"
 
-print (greeting + cat + ".")            // concatenation
-cat.append(myChar)						          // concatenation with char
-print ("My cat's name is \(cat)")		    // interpolation
-greeting += cat                         // add & assign to existing string
+// concatenation
+print (greeting + cat + ".")
+// concatenation with char
+cat.append(myChar)
+// interpolation
+print ("My cat's name is \(cat)")
+// add & assign to existing string
+greeting += cat
 
 
 // multi-line
-// ----------------------------------------------------------------------------
 let longString = """
 When you write a string that spans multiple
 lines make sure you start its content on a
