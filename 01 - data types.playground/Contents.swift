@@ -39,59 +39,69 @@ func nada(this: NSString , that: NSString ) -> Int {
 // BOOLS
 // ----------------------------------------------------------------------------
 
-// declaration -> create but don't initialize
+// declaration - create but don't initialize
 var isOrange: Bool
 
 // create and initialize with an initial value
 var isApple = true
 
-// determine equality and assign value to constant
+// determine equality and assign value to constant -> false
 let guess = "dog"
-let dogEqualsCat = guess == "cat"   // o: false
+let dogEqualsCat = guess == "cat"
 
+// -> false
 let myAge = 30
-let isTeenager = myAge >= 13 && myAge <= 19   // o: false
+let isTeenager = myAge >= 13 && myAge <= 19
 
 
-// toggle a state change
+// toggle a state change -> false
 var switchState = true
-switchState.toggle()                // o: false
+switchState.toggle()
 
 
 
 // NUMBERS
-// declaration
 // ----------------------------------------------------------------------------
-var myVariable1: Int                // create but don't initialize
-var myVariable2 = Int()             // create/init with 0 value
 
-// create and initialize with an initial value
-var myVariable3 = 24                // preferred
+// declaration - create but don't initialize
+var myVariable1: Int
+
+// declaration - create/init with 0 value
+var myVariable2 = Int()
+
+// create and initialize with an initial value (preferred)
+var myVariable3 = 24
 
 // create multiple variables
 var yes = 0, no = 0
 
 
 // notation
-// ----------------------------------------------------------------------------
-let binaryNotation = 0b110011         // o: 51 prefix with 0b
-let octalNotation = 0o12              // o: 10 prefix with 0o
-let hexadecimalNotation = 0x32        // o: 50 prefix with 0x
+// -> 51 prefix with 0b
+let binaryNotation = 0b110011
+// -> 10 prefix with 0o
+let octalNotation = 0o12
+// -> 50 prefix with 0x
+let hexadecimalNotation = 0x32
 
-let scientificNotation = 4.4e-7       // o: suffix with e-
-let longNumber = 1_000_000            // optional _ = easier to read
+// -> suffix with e-
+let scientificNotation = 4.4e-7
+// optional _ = easier to read
+let longNumber = 1_000_000
 
 
 
 // STRINGS
-// declaration
 // ----------------------------------------------------------------------------
-var myString1: String               // create but don't initialize
-var myString2 = String()            // create/init with a 0/"" value
 
-// create and initialize with an initial value
+// declaration - create but don't initialize
+var myString1: String
+// declaration - create/init with 0 value
+var myString2 = String()
+
+// create and initialize with an initial value (preferred)
 var myChar: Character = "!"
-var myString3 = "Hello"             // preferred
+var myString3 = "Hello"
 
 // create multiple variables
 var animal = "bear", bird = "crane"
