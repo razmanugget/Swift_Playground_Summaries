@@ -136,7 +136,6 @@ print(longString)
 
 
 // iterating thru each character of name
-// ----------------------------------------------------------------------------
 for catChars in cat {
   print(catChars)                       // prints -> Whiskers meow meow!
 }
@@ -145,13 +144,11 @@ let reversed = String(cat.reversed())   // reverses letters
 
 
 // formatting decimals with Strings
-// ----------------------------------------------------------------------------
 let angle = 45.6789
 let formatted = String(format: "Angle: %.2f", angle)
 
 
 // search w/in a string
-// ----------------------------------------------------------------------------
 var bookTitle = "2000 Leagues Under the Sea"
 
 if bookTitle.range(of: "sea") != nil {
@@ -163,7 +160,6 @@ if bookTitle.range(of: "sea", options: .caseInsensitive) != nil {
 
 
 // search w/in a string and replace
-// ----------------------------------------------------------------------------
 var bigStr = "  Tay lor  "
 bigStr.replacingOccurrences(of: " ", with: "")  // o: Taylor
 
