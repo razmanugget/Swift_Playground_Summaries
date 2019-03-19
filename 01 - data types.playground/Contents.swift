@@ -184,7 +184,6 @@ let trimmedTitle = bookTitle.trimmingCharacters(in: .whitespacesAndNewlines)
 print(trimmedTitle)
 
 
-
 // separating strings based on components
 // -> array: "War", "and", "Peace"
 var titleBreakdown = trimmedTitle.components(separatedBy: " ")
@@ -210,8 +209,8 @@ NSString(string: newSubString.substring(from: 4)).substring(to: 3)
 // other String methods
 let mouseName = "Mickey"
 
-// counting characters
-var nameNum = (mouseName.count)         // result -> 19 characters
+// counting characters-> 6 characters
+var nameNum = (mouseName.count)
 
 // confirm contents
 if mouseName.isEmpty {
@@ -230,9 +229,14 @@ mouseName.capitalized
 // TUPLES
 // ----------------------------------------------------------------------------
 
-// assigning
+// declaration - create but don't initialize
+var rectangle0: (Int, Int)
+
+// create and initialize with initial values
 let rectangle1 = (200, 100)
-var rectangle2 = (width:200, height:100)     // with names
+
+// create and initialize with initial values and names (preferred)
+var rectangle2 = (width:200, height:100)
 
 
 // decomposing (option 1 - .dot syntax or name)
