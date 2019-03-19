@@ -154,75 +154,83 @@ let formatted = String(format: "Angle: %.2f", angle)
 
 // search
 // search w/in a string
-var bookTitle = "2000 Leagues  Under the Sea"
+var bookTitle = "  War and Peace  "
 
 // -> false (case sensitive)
-if bookTitle.range(of: "sea") != nil {
-  print("sea appears in the title")
+if bookTitle.range(of: "war") != nil {
+  print("war appears in the title")
 }
 
 // -> true (case insensitive)
-if bookTitle.range(of: "under", options: .caseInsensitive) != nil {
-  print("under appears in title")
+if bookTitle.range(of: "peace", options: .caseInsensitive) != nil {
+  print("peace appears in the title")
 }
 
-// search and replace
-bookTitle.replacingOccurrences(of: "2000", with: "20000")
-
-// for just beg/end use    o: Tay lor
-let trimmed = bookTitle.trimmingCharacters(in: .whitespacesAndNewlines)
-print(trimmed)
-
-
-// identify suffixes/prefixes
-// ----------------------------------------------------------------------------
-if bookTitle.hasPrefix("2000") {
-	print("number first")
+// identify suffix -> true
+if bookTitle.hasPrefix("War") {
+  print("War first")
 }
 
-if bookTitle.hasSuffix("Sea") {
-	print("Sea at end")
+// identify prefix -> true
+if bookTitle.hasSuffix("Peace") {
+  print("Peace at end")
 }
+
+// search and replace -> WarandPeace
+bookTitle.replacingOccurrences(of: " ", with: "")
+
+// for just beg/end use -> War and Peace
+let trimmedTitle = bookTitle.trimmingCharacters(in: .whitespacesAndNewlines)
+print(trimmedTitle)
+
 
 
 // separating strings based on components
-// ----------------------------------------------------------------------------
-var titleBreakdown = bookTitle.components(separatedBy: " ")
-print(titleBreakdown)					// = array: 2000, Leagues, Under..
+// -> array: "War", "and", "Peace"
+var titleBreakdown = trimmedTitle.components(separatedBy: " ")
+print(titleBreakdown)
 
 
 // select characters
-// ----------------------------------------------------------------------------
-let newSubString = NSString(string: bookTitle)
+let newSubString = NSString(string: "War and Peace")
 
-newSubString.substring(to: 4)					// o: 2000
-newSubString.substring(from: 13)			// o: Under the Sea
+// -> War
+newSubString.substring(to: 3)
 
-// selecting a range  o: Under
-newSubString.substring(with: NSRange(location: 13, length: 5))
-NSString(string: newSubString.substring(from: 13)).substring(to: 5)
+// -> ace
+newSubString.substring(from: 10)
+
+// selecting a range -> "and"
+newSubString.substring(with: NSRange(location: 4, length: 3))
+
+// combined conversion and selection -> "and"
+NSString(string: newSubString.substring(from: 4)).substring(to: 3)
 
 
 // other String methods
-// ----------------------------------------------------------------------------
+let mouseName = "Mickey"
+
 // counting characters
-var nameNum = (cat.count)         // result -> 19 characters
+var nameNum = (mouseName.count)         // result -> 19 characters
 
 // confirm contents
-if cat.isEmpty {
-  print("no cat here")
+if mouseName.isEmpty {
+  print("no mouse in here")
 }
 
 // change case
-cat.uppercased()                  // converts all chars to upper
-cat.lowercased()                  // converts all chars to lower
-cat.capitalized                   // capitalize each char before a space
+mouseName.uppercased()
+mouseName.lowercased()
+
+// capitalize each char before a space
+mouseName.capitalized                   
 
 
 
 // TUPLES
-// assigning
 // ----------------------------------------------------------------------------
+
+// assigning
 let rectangle1 = (200, 100)
 var rectangle2 = (width:200, height:100)     // with names
 
