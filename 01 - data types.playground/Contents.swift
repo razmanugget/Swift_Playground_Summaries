@@ -114,10 +114,13 @@ var cat = "Whiskers meow meow"
 
 // concatenation
 print (greeting + cat + ".")
+
 // concatenation with char
 cat.append(myChar)
+
 // interpolation
 print ("My cat's name is \(cat)")
+
 // add & assign to existing string
 greeting += cat
 
@@ -131,7 +134,6 @@ quotes also on a line of their own.
 Multi-line strings also let you write "quote marks"
 freely inside your strings, which is great!
 """
-
 print(longString)
 
 
@@ -150,23 +152,26 @@ let angle = 45.6789
 let formatted = String(format: "Angle: %.2f", angle)
 
 
+// search
 // search w/in a string
-var bookTitle = "2000 Leagues Under the Sea"
+var bookTitle = "2000 Leagues  Under the Sea"
+
+// -> false (case sensitive)
 if bookTitle.range(of: "sea") != nil {
-  print("The word \("Sea") appears in \(bookTitle)")
-}
-if bookTitle.range(of: "sea", options: .caseInsensitive) != nil {
-  print("The word \("Sea") appears in \(bookTitle)")
+  print("sea appears in the title")
 }
 
+// -> true (case insensitive)
+if bookTitle.range(of: "under", options: .caseInsensitive) != nil {
+  print("under appears in title")
+}
 
-// search w/in a string and replace
-var bigStr = "  Tay lor  "
-bigStr.replacingOccurrences(of: " ", with: "")  // o: Taylor
+// search and replace
+bookTitle.replacingOccurrences(of: "2000", with: "20000")
 
 // for just beg/end use    o: Tay lor
-let trimmed = bigStr.trimmingCharacters(in: .whitespacesAndNewlines)
-trimmed
+let trimmed = bookTitle.trimmingCharacters(in: .whitespacesAndNewlines)
+print(trimmed)
 
 
 // identify suffixes/prefixes
