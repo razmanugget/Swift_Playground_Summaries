@@ -135,12 +135,14 @@ freely inside your strings, which is great!
 print(longString)
 
 
-// iterating thru each character of name
-for catChars in cat {
-  print(catChars)                       // prints -> Whiskers meow meow!
+// iterating thru each character of name -> F i d o
+let dogName = "Fido"
+for dogChars in dogName {
+  print(dogChars)
 }
 
-let reversed = String(cat.reversed())   // reverses letters
+// reversing -> odiF
+let reversed = String(dogName.reversed())
 
 
 // formatting decimals with Strings
@@ -150,7 +152,6 @@ let formatted = String(format: "Angle: %.2f", angle)
 
 // search w/in a string
 var bookTitle = "2000 Leagues Under the Sea"
-
 if bookTitle.range(of: "sea") != nil {
   print("The word \("Sea") appears in \(bookTitle)")
 }
