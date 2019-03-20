@@ -239,21 +239,21 @@ let rectangle1 = (200, 100)
 var rectangle2 = (width:200, height:100)
 
 
-// decomposing with .dot syntax -> .1 = 100
+// decompose with .dot syntax -> 100
 rectangle1.1
-// decomposing with name -> 200
+// decompose with name -> 200
 rectangle2.width
 
-// decomposing by letting a variable = tuple)
-let (a, b) = rectangle1                      // a = 200, b = 100
-let (_, e) = rectangle2                      // "_" -> ignore values
+// decompose by letting a variable = tuple -> a = 200, b = 100
+let (a, b) = rectangle1
+let (_, e) = rectangle2
 
-print("a = \(a) and e = \(e)")               // o: 200, 100
+print("a = \(a) and e = \(e)")
 
 
 // function returning a tuple
-func getSongAndDuration() -> (name:String, length:Int?) {
-  return("Moonlight in Vermont", 210)
+func getSongAndDuration() -> (name: String, length: Int?) {
+  return("Centerfold", 210)
 }
 
 
