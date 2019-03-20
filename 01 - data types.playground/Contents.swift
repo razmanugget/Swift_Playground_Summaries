@@ -251,7 +251,6 @@ print("a = \(a) and e = \(e)")               // o: 200, 100
 
 
 // function returning a tuple
-// ----------------------------------------------------------------------------
 func getSongAndDuration() -> (name:String, length:Int?) {
   return("Moonlight in Vermont", 210)
 }
