@@ -239,12 +239,11 @@ let rectangle1 = (200, 100)
 var rectangle2 = (width:200, height:100)
 
 
-// decomposing (option 1 - .dot syntax or name)
-// ----------------------------------------------------------------------------
+// decomposing with .dot syntax or name
 rectangle1.1                                 // .0=200, .1=100
 rectangle2.width                             // o: 200
 
-// decomposing (option 2 - let a variable = tuple)
+// decomposing by letting a variable = tuple)
 let (a, b) = rectangle1                      // a = 200, b = 100
 let (_, e) = rectangle2                      // "_" -> ignore values
 
