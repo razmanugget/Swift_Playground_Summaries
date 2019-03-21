@@ -244,7 +244,7 @@ rectangle1.1
 // decompose with name -> 200
 rectangle2.width
 
-// decompose by letting a variable = tuple -> a = 200, b = 100
+// -> a = 200, b = 100
 let (a, b) = rectangle1
 let (_, e) = rectangle2
 
@@ -252,8 +252,9 @@ print("a = \(a) and e = \(e)")
 
 
 // function returning a tuple
-func getSongAndLength() -> (name: String, length: Int?) {
-  return("Centerfold", nil)
+func getSongAndLength() 
+  -> (name: String, length: Int?) {
+    return("Centerfold", 200)
 }
 
 // assignment of a tuple from a function
@@ -263,9 +264,10 @@ print("The song is \(name) and it's \(length ?? 90) seconds long")
 
 
 // OPTIONALS
-// creation (?)
 // ----------------------------------------------------------------------------
-var errorCodeStrg: String?									// optional creation
+
+// initialization (?)
+var errorCodeStrg: String?
 
 // access by including a default value to prevent nil
 print(errorCodeStrg ?? "default value")     // r: "default value"
