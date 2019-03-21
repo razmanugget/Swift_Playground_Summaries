@@ -252,15 +252,12 @@ print("a = \(a) and e = \(e)")
 
 
 // function returning a tuple
-func getSongAndDuration() -> (name: String, length: Int?) {
-  return("Centerfold", 210)
+func getSongAndLength() -> (name: String, length: Int?) {
+  return("Centerfold", nil)
 }
 
-
 // assignment of a tuple from a function
-// ----------------------------------------------------------------------------
-let (name, length) = getSongAndDuration()
-
+let (name, length) = getSongAndLength()
 print("The song is \(name) and it's \(length ?? 90) seconds long")
 
 
