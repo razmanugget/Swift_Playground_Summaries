@@ -73,7 +73,6 @@ var website2 = personalSite ?? defaultSite
 
 
 // check Identity ===
-// ----------------------------------------------------------------------------
 class C {
 	var varX = 1
 }
