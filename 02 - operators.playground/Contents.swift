@@ -31,17 +31,20 @@ let remainder = 5.0.truncatingRemainder(dividingBy: 3.2)
 // ----------------------------------------------------------------------------
 let x = 100, y = 200
 
-let b1 = x < y											// r: true
-let b2 = x == y											// r: false
+// -> true
+let b1 = x < y
+// -> false
+let b2 = x == y
 
-// tuples
-(1, "zebra") < (2, "apple")					// r: true
-(3, "apple") < (3, "bird")					// r: true
-(4, "dog") == (4, "dog")						// r: true
+// -> true
+(1, "zebra") < (2, "apple")
+// -> true
+(3, "apple") < (3, "bird")
+// -> true
+(4, "dog") >= (4, "dog")
 
 
 // ternary conditional operator
-// ----------------------------------------------------------------------------
 var pop = 4442
 let message = pop < 9999 ? "Small town" : "\(pop) is big!"
 
@@ -50,9 +53,8 @@ j == 5 ? "We're good" : "Oops, not quite"
 
 
 // nil-coalescing operator
-// ----------------------------------------------------------------------------
 var personalSite: String?
-let defaultSite = "http://www.lynda.com"
+let defaultSite = "http://www.lyfebug.com"
 
 // without ?? operator
 var website: String
