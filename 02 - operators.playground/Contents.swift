@@ -45,11 +45,12 @@ let b2 = x == y
 
 
 // ternary conditional operator
-var pop = 4442
-let message = pop < 9999 ? "Small town" : "\(pop) is big!"
+var pop = 5000
 
-var j = 5
-j == 5 ? "We're good" : "Oops, not quite"
+// -> Small town
+let message = pop < 9999 ? "Small town" : "\(pop) is big!"
+// -> true
+pop == 5000 ? "We're good" : "Oops, not quite"
 
 
 // nil-coalescing operator
