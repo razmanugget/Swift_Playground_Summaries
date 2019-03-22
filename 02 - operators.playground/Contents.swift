@@ -81,14 +81,16 @@ let classOne = C()
 let classTwo = C()
 let classThree = classOne
 
+// -> might be equal...
 if classOne === classTwo {
 	print("They're identical.")
 } else {
-	print("They might be equal, but not identical.")			// o: true
+	print("They might be equal, but not identical.")
 }
 
+// -> Yes
 if classOne === classThree {
-	print("Yes, they refer to the same object.")					// o: true
+	print("Yes, they refer to the same object.")
 }
 
 
