@@ -15,16 +15,16 @@ let e = (6, 7, 8)
 
 
 // calculations
-var quantity = 42
-var unitPrice = 34.55
+let quantity = 42
+let unitPrice = 34.55
+let result = Double(quantity) * unitPrice
 
-var result = Double(quantity) * unitPrice
 
+// modulus % -> -1
+let remainderUnits = -9 % 4
 
-// modulus % | remainder operator
-// ----------------------------------------------------------------------------
-var remainderUnits = -9 % 4											  // r: -1
-var f = d.truncatingRemainder(dividingBy: 2.0)		// r: 1 (5.0 % 2)
+// modulus function -> 1.8
+let remainder = 5.0.truncatingRemainder(dividingBy: 3.2)
 
 
 // comparison
