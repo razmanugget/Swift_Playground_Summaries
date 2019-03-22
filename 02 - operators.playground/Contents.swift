@@ -2,16 +2,19 @@ import UIKit
 
 
 // OPERATORS
-// assignment 
 // ----------------------------------------------------------------------------
-var a = 1											// assigns a variable
-var b = a											// assigns a constant
-let (c, d) = (4, 5.0)					// c = 4, d = 5
-let e = (6, 7, 8)							// assigns a tuple (.0=6, .1=7, .2=8)
+
+// assign a variable
+var a = 1
+// assign a constant
+let b = a							
+// assign multiple -> c = 4, d = 5.0
+let (c, d) = (4, 5.0)
+// assign a tuple -> e.0 = 6, e.1 = 7, e.2 = 8
+let e = (6, 7, 8)
 
 
 // calculations
-// ----------------------------------------------------------------------------
 var quantity = 42
 var unitPrice = 34.55
 
