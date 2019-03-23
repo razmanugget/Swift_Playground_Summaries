@@ -61,7 +61,7 @@ var personalSite: String?
 let defaultSite = "http://www.lyfebug.com"
 
 // without ?? operator
-var website: String
+let website: String
 if personalSite != nil {
 	website = personalSite!
 } else {
@@ -69,7 +69,7 @@ if personalSite != nil {
 }
 
 // with ?? operator
-var website2 = personalSite ?? defaultSite
+let website2 = personalSite ?? defaultSite
 
 
 // check Identity ===
@@ -83,9 +83,9 @@ let classThree = classOne
 
 // -> might be equal...
 if classOne === classTwo {
-	print("They're identical.")
+	print("Identical")
 } else {
-	print("They might be equal, but not identical.")
+	print("Maybe equal, but not identical")
 }
 
 // -> Yes
@@ -94,19 +94,16 @@ if classOne === classThree {
 }
 
 
-// closed range operator (...)
+// range operators
 // ----------------------------------------------------------------------------
-var range1 = 1...5
 
-for hello in range1 {
+// closed range operator (...)
+for hello in 1...5 {
 	print("\(hello)")
 }
 
-
 // half-open range operator (..<)
-// ----------------------------------------------------------------------------
-var someArray = [8,4,3]
-
+let someArray = [8,4,3]
 for i in 0..<someArray.count {
 	print(someArray[i])
 }
