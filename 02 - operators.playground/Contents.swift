@@ -97,12 +97,12 @@ if classOne === classThree {
 // range operators
 // ----------------------------------------------------------------------------
 
-// closed range operator (...)
+// closed (...)
 for hello in 1...5 {
 	print("\(hello)")
 }
 
-// half-open range operator (..<)
+// half-open (..<)
 let someArray = [8,4,3]
 for i in 0..<someArray.count {
 	print(someArray[i])
@@ -110,24 +110,30 @@ for i in 0..<someArray.count {
 
 
 // logical operators
-// ----------------------------------------------------------------------------
 let k = true, m = false
 
-let o = k && m											// r: false
-let p = k || m											// r: true
+// -> false
+let o = k && m
+// -> true
+let p = k || m
 
 
-// rounding
+// rounding - require Double
 // ----------------------------------------------------------------------------
-let testNumber = -36.98
+
+let testNumber = -36.55
 var roundNumber: Double
 
-roundNumber = round(testNumber)     // o: -37.0 (needs Double)
-roundNumber = floor(testNumber)     // o: -37
-roundNumber = ceil(testNumber)      // o: -36
-roundNumber = trunc(testNumber)     // o: -36
+// -> -37.0
+roundNumber = round(testNumber)
+// -> -37.0
+roundNumber = floor(testNumber)
+// -> -36.0
+roundNumber = ceil(testNumber)
+// -> -36.0
+roundNumber = trunc(testNumber)
 
-// rounding to specific decimal places
+// rounding to specific decimal places -> -36.5
 let doubleStr = String(format: "%.1f", testNumber)
 
 
