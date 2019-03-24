@@ -20,11 +20,42 @@ let unitPrice = 34.55
 let result = Double(quantity) * unitPrice
 
 
+// math
+
+// -> 36.55
+let absolute = abs(-36.55)
+// -> 2
+(4.0).squareRoot()
+// -> 10
+max(5, 10)
+// -> -10
+min(-5, -10)
+// -> 3.14159...
+print(Double.pi)
+
+
 // modulus % -> -1
 let remainderUnits = -9 % 4
 
 // modulus function -> 1.8
 let remainder = 5.0.truncatingRemainder(dividingBy: 3.2)
+
+
+// rounding - require Double
+let testNumber = -36.55
+var roundNumber: Double
+
+// -> -37.0
+roundNumber = round(testNumber)
+// -> -37.0
+roundNumber = floor(testNumber)
+// -> -36.0
+roundNumber = ceil(testNumber)
+// -> -36.0
+roundNumber = trunc(testNumber)
+
+// rounding to specific decimal places -> -36.5
+let doubleStr = String(format: "%.1f", testNumber)
 
 
 // comparison
@@ -116,41 +147,3 @@ let k = true, m = false
 let o = k && m
 // -> true
 let p = k || m
-
-
-// rounding - require Double
-// ----------------------------------------------------------------------------
-
-let testNumber = -36.55
-var roundNumber: Double
-
-// -> -37.0
-roundNumber = round(testNumber)
-// -> -37.0
-roundNumber = floor(testNumber)
-// -> -36.0
-roundNumber = ceil(testNumber)
-// -> -36.0
-roundNumber = trunc(testNumber)
-
-// rounding to specific decimal places -> -36.5
-let doubleStr = String(format: "%.1f", testNumber)
-
-
-// math
-// ----------------------------------------------------------------------------
-
-// -> 36.55
-let absolute = abs(-36.55)
-// -> 2
-(4.0).squareRoot()
-// -> 10
-max(5, 10)
-// -> -10
-min(-5, -10)
-// -> 3.14159...
-print(Double.pi)
-
-
-
-
