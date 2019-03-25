@@ -442,7 +442,7 @@ let dog2 = susie.dog?.name          					// o: optional "Spot"
 // nil coalescing operator (??)
 // ----------------------------------------------------------------------------
 var personalSite:String?
-let defaultSite = "http://www.lynda.com"
+let defaultSite = "http://www.lyfebug.com"
 
 // without ?? operator
 var website:String
@@ -454,6 +454,7 @@ if personalSite != nil {
 
 // with ?? operator
 var website2 = personalSite ?? defaultSite
+
 
 /* 
  // working with Obj-C arrays
@@ -501,4 +502,3 @@ var website2 = personalSite ?? defaultSite
  let plist = defaults.objectForKey("foo")      // plist = AnyObject
  defaults.setObject(plist, forKey: "foo")
  */
-

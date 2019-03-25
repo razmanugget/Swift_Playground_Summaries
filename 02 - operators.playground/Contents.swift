@@ -21,7 +21,6 @@ let result = Double(quantity) * unitPrice
 
 
 // math
-
 // -> 36.55
 let absolute = abs(-36.55)
 // -> 2
@@ -41,7 +40,7 @@ let remainderUnits = -9 % 4
 let remainder = 5.0.truncatingRemainder(dividingBy: 3.2)
 
 
-// rounding - require Double
+// rounding
 let testNumber = -36.55
 var roundNumber: Double
 
@@ -125,7 +124,7 @@ if classOne === classThree {
 }
 
 
-// range operators
+// range & logical operators
 // ----------------------------------------------------------------------------
 
 // closed (...)
