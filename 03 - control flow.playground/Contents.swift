@@ -34,7 +34,7 @@ for i: Character in "Swift" {
 
 // loop - for in case where 
 // -> 3 6 9 12...
-for case let i in 1...100 where i % 3 == 0 {
+for case let i in 1...50 where i % 3 == 0 {
 	print(i)
 }
 
@@ -46,29 +46,29 @@ for count in stride(from: 11, to: 1, by: -2) {
 }
 
 
-// reverse for in loop
-for reversedCount in (1...10).reversed() {
+// loop - for in reversed
+for reversedCount in (1...5).reversed() {
   print("\(reversedCount)")
 }
 
 
-// while Loop
+// while loop
 // ----------------------------------------------------------------------------
+// -> 1 2 3 (i = 4 at end)
 var i = 1
-
-while i <= 10 {
+while i <= 3 {
 	print("i = \(i)")
 	i += 1
 }
 
 
-
-// repeat while Loop
-// ----------------------------------------------------------------------------
+// loop repeat while
+// -> 1 2 3 (j = 4 at end)
+var j = 1
 repeat {
-	print("i = \(i)")
-	i += 1
-} while i <= 10
+	print("j = \(j)")
+	j += 1
+} while j <= 3
 
 
 // if / else statement
