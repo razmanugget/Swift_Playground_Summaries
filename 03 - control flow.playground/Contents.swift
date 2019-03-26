@@ -74,8 +74,9 @@ repeat {
 
 // if / else statement
 // ----------------------------------------------------------------------------
+// -> This is true
 if (1 < 3) {
-	print("This is true")						// matches 1st case, then breaks
+	print("This is true")
 } else if (1 < 2) {
 	print("Yes, but not reached")
 } else {
@@ -85,8 +86,8 @@ if (1 < 3) {
 
 
 // SWITCH
-// basic switch statement
 // ----------------------------------------------------------------------------
+// basic switch statement
 var statusCode = 404
 var errorString = "The request failed with error:"
 
@@ -145,13 +146,13 @@ default:
 let age = 25
 
 if case 18...35 = age, age >= 21 {
-	print("Cool demographic and of drinking age")
+	print("Cool and can drink")
 }
 
 // if case converted to a straight if
 // ----------------------------------------------------------------------------
 if (age >= 18) && (age <= 35) && (age >= 21) {
-	print("Cool demographic and of drinking age")
+	print("Cool and can drink")
 }
 
 // Control Transfer Statements
