@@ -47,6 +47,7 @@ for count in stride(from: 11, to: 1, by: -2) {
 
 
 // loop - for in reversed
+// -> 5 4 3...
 for reversedCount in (1...5).reversed() {
   print("\(reversedCount)")
 }

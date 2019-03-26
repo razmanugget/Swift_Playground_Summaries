@@ -113,7 +113,7 @@ print("Area = \(calcArea(argHeight: 10, argWidth: 12))")
 // default parameter values  (=)
 // ----------------------------------------------------------------------------
 func add(a: Int = 10, b: Int = 50) -> Int {
-	return(a + b)
+	return (a + b)
 }
 add()																// 10 + 50
 add(b:200)													// 10 + 200

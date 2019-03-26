@@ -113,13 +113,13 @@ var greeting = "Hello, "
 var cat = "Whiskers meow meow"
 
 // concatenation
-print (greeting + cat + ".")
+print(greeting + cat + ".")
 
 // concatenation with char
 cat.append(myChar)
 
 // interpolation
-print ("My cat's name is \(cat)")
+print("My cat's name is \(cat)")
 
 // add & assign to existing string
 greeting += cat
@@ -254,7 +254,7 @@ print("a = \(a) and e = \(e)")
 // function returning a tuple
 func getSongAndLength() 
   -> (name: String, length: Int?) {
-    return("Centerfold", 200)
+    return ("Centerfold", 200)
 }
 
 // assignment of a tuple from a function
@@ -340,7 +340,7 @@ var assumedString:String! = "An implicitly unwrapped optional string."
 let implicitString = assumedString           // no need for ! mark
 
 assumedString = "No longer an optional - No extra formatting to unwrap is needed to change"
-print (implicitString ?? "default value here")
+print(implicitString ?? "default value here")
 
 
 
