@@ -1,9 +1,10 @@
 import UIKit
 import Foundation
 
-// CONTROL FLOW
+// for / in loops
 // ----------------------------------------------------------------------------
-// basic for-in loop -> prints #'s
+
+// basic -> prints #'s
 for i in 1...10 {
 	print("i = \(i)")
 }
@@ -13,40 +14,39 @@ for _ in 1...5 {
 	print("Hello")
 }
 
-// populate an array with 1-50
+// -> populates an array with 1-50
 var cellContent = [Int]()
 for i in 1...50 {
 	cellContent.append(i)
 }
 
-// prints each name
+// -> prints each name
 let names = ["Jim", "John", "Jill"]
 for n in names {
 	print(n)
 }
 
-// prints each letter -> S w i f t
+// -> prints S w i f t
 for i: Character in "Swift" {
 	print(i)
 }
 
 
-// for in case where loop
-// ----------------------------------------------------------------------------
+// loop - for in case where 
+// -> 3 6 9 12...
 for case let i in 1...100 where i % 3 == 0 {
 	print(i)
 }
 
 
-// stride for in loop
-// ----------------------------------------------------------------------------
+// loop - for in stride 
+// -> 11 9 7...
 for count in stride(from: 11, to: 1, by: -2) {
 	print("\(count)")
 }
 
 
 // reverse for in loop
-// ----------------------------------------------------------------------------
 for reversedCount in (1...10).reversed() {
   print("\(reversedCount)")
 }

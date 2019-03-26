@@ -5,8 +5,8 @@ import UIKit
 // comments
 // this is a single line comment
 /*
-		this is a multi-line comment
-*/
+ this is a multi-line comment
+ */
 
 
 // landmarks
@@ -301,10 +301,10 @@ if let errorCodeStrg = errorCodeStrg, possibleError == "123" {
 // optional binding (while)
 // ----------------------------------------------------------------------------
 while isApple == true {
-	print(errorCodeStrg!)															// r: optional 404
-	errorCodeStrg = nil
-	
-	isApple = false
+  print(errorCodeStrg!)															// r: optional 404
+  errorCodeStrg = nil
+  
+  isApple = false
 }
 print(errorCodeStrg ?? "optional error")						// r: "opt error"
 
@@ -321,7 +321,7 @@ print(implicitInt ?? "optional")					// r: optional 44
 print(implicitInt!)												// r: 44  (forced unwrapping)
 
 if let boundInt = implicitInt {						// binding to non-optional
-	print(boundInt)													// r: 44
+  print(boundInt)													// r: 44
 }
 
 
@@ -378,12 +378,12 @@ print(nextlevel)
 // optional chaining class example
 // ----------------------------------------------------------------------------
 class Person {
-	var dog: Dog?
+  var dog: Dog?
 }
 
 class Dog {
-	var name: String
-	init(name: String) {self.name = name}
+  var name: String
+  init(name: String) {self.name = name}
 }
 
 let susie = Person()
@@ -391,54 +391,54 @@ let dogsName = susie.dog?.name      					// o: nil
 
 susie.dog = Dog(name: "Spot")
 let dog2 = susie.dog?.name          					// o: optional "Spot"
- 
- 
- // optional chaining with subscripts
- // ----------------------------------------------------------------------------
- class Site {
- var title: String
- var libraries: [Library]?
- 
- init(title:String) {self.title = title}
- }
- 
- class Library {
- var title: String
- var documents: [Document]?
- 
- init(title: String) {self.title = title}
- }
- 
- class Document {
- var title: String
- 
- init(title: String) {self.title = title}
- }
- 
- // creating the doc libary instance and linking to site
- // ----------------------------------------------------------------------------
- let acctSite = Site(title: "Accounting")
- let auditLibrary = Library(title: "Audit Library")
- acctSite.libraries = []
- acctSite.libraries?.append(auditLibrary)
- 
- 
- 
- // creating the doc and adding it to Audit Library
- // ----------------------------------------------------------------------------
- let auditDoc = Document(title: "Auditing")
- auditLibrary.documents = []
- auditLibrary.documents?.append(auditDoc)
- 
- let docName = acctSite.libraries?[0].documents?[0].title
- 
- if let name = docName {
- print("Document name is \(name).")
- } else {
- print("Could not retrieve document name.")
- }
 
 
+// optional chaining with subscripts
+// ----------------------------------------------------------------------------
+class Site {
+  var title: String
+  var libraries: [Library]?
+  
+  init(title:String) {self.title = title}
+}
+
+class Library {
+  var title: String
+  var documents: [Document]?
+  
+  init(title: String) {self.title = title}
+}
+
+class Document {
+  var title: String
+  
+  init(title: String) {self.title = title}
+}
+
+// creating the doc libary instance and linking to site
+// ----------------------------------------------------------------------------
+let acctSite = Site(title: "Accounting")
+let auditLibrary = Library(title: "Audit Library")
+acctSite.libraries = []
+acctSite.libraries?.append(auditLibrary)
+
+
+
+// creating the doc and adding it to Audit Library
+// ----------------------------------------------------------------------------
+let auditDoc = Document(title: "Auditing")
+auditLibrary.documents = []
+auditLibrary.documents?.append(auditDoc)
+
+let docName = acctSite.libraries?[0].documents?[0].title
+
+if let name = docName {
+  print("Document name is \(name).")
+} else {
+  print("Could not retrieve document name.")
+}
+
+ 
 // nil coalescing operator (??)
 // ----------------------------------------------------------------------------
 var personalSite:String?
