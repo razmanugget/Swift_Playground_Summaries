@@ -89,8 +89,9 @@ if (1 < 3) {
 // ----------------------------------------------------------------------------
 // basic switch statement
 var statusCode = 404
-var errorString = "Request failed with error: "
+var errorString = "Error: "
 
+// -> Error: 404
 switch statusCode {
 case 100:
   errorString += "Info, 100."
@@ -99,18 +100,18 @@ case 201, 204:
   errorString += "No content 2xx."
 // range case
 case 400...417:																	
-  errorString += "Client error, \(statusCode)"
+  errorString += "\(statusCode)"
 default:
   errorString = "\(statusCode) Unknown."
 }
 
 
-// switch with a tuple
-// ----------------------------------------------------------------------------
-var dogInfo = (7, "Fido")						// the tuple
+// switch with tuple matching
+var dogInfo = (7, "Fido")
 
 switch dogInfo {
-case (7, "fido"):										// no due to case sensitivity
+  // no due to case sensitivity
+case (7, "fido"):										
 	"Dat's fido who is 7"
 case (7, _):												// "_" -> wildcard
 	"Dat dog is 7"
