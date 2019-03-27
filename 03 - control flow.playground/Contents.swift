@@ -183,27 +183,28 @@ let puzzleInput = "great minds think alike"
 var puzzleOutput = ""
 
 for char in puzzleInput {
-	switch char {
-	case "a", "e", "i", "o", "u", " ":
-		continue
-	default:
-		puzzleOutput.append(char)
-	}}
+  switch char {
+  case "a", "e", "i", "o", "u", " ":
+    continue
+  default:
+    puzzleOutput.append(char)
+  }
+}
 print(puzzleOutput)												
 
 
 // break
-// ----------------------------------------------------------------------------
+// -> 1, 2, 3
 for i in 1...10 {
-	if (i >= 4) && (i <= 7) {
-		break
-	}
-	print(i)																// prints 1, 2, 3
+  if (i >= 4) && (i <= 7) {
+    break
+  }
+  print(i)
 }
 
 switch puzzleOutput {
 default:
-	break
+  break
 }
 
 
