@@ -166,26 +166,30 @@ if (age >= 18) && (age <= 35) && (age >= 21) {
 }
 
 // Control Transfer Statements
-// continue
 // ----------------------------------------------------------------------------
+
+// continue
+// -> 1, 2, 3, 8, 9, 10
 for i in 1...10 {
 	if (i >= 4 && i <= 7) {
 		continue
 	}
-	print(i)																// prints 1, 2, 3, 8, 9, 10
+	print(i)
 }
 
+// remove vowels
+// -> grtmndsthnklk
 let puzzleInput = "great minds think alike"
 var puzzleOutput = ""
-for character in puzzleInput {
-	switch character {
+
+for char in puzzleInput {
+	switch char {
 	case "a", "e", "i", "o", "u", " ":
 		continue
 	default:
-		puzzleOutput.append(character)
+		puzzleOutput.append(char)
 	}}
-
-print(puzzleOutput)												// o: grtmndsthnklk
+print(puzzleOutput)												
 
 
 // break
