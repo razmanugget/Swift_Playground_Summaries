@@ -108,9 +108,9 @@ default:
 
 // switch with tuple matching
 // -> That dog is 7
-var dogInfo = (7, "Fido")
+let dogInfo1 = (7, "Fido")
 
-switch dogInfo {
+switch dogInfo1 {
 // no, due to case sensitivity
 case (7, "fido"):
   "fido is 7"
@@ -124,7 +124,7 @@ default:
 
 // switch with value bindings
 // -> My dog Maxx is 8
-var dogInfo2 = (7, "Max")
+let dogInfo2 = (7, "Max")
 
 switch dogInfo2 {
 // 1st tuple value bound to age
@@ -138,28 +138,29 @@ case var (age, name):
 }
 
 
-// switch with value bindings & where stmt
-// ----------------------------------------------------------------------------
-switch dogInfo {
-case let (_, name) where name == "fido":
-	"Is that fido?"
+// value bindings & where clause
+// -> Spot is 7
+let dogInfo3 = (7, "Spot")
+
+switch dogInfo3 {
+case let (_, name) where name == "spot":
+	"Is that spot?"
 case let (age, name) where age == 7:
-	"\(name) is \(age) years old"
+	"\(name) is \(age)"
 default:
 	"default dog"
 }
 
 
 // if case & implied where stmt
-// ----------------------------------------------------------------------------
+// -> Cool and...
 let age = 25
 
 if case 18...35 = age, age >= 21 {
 	print("Cool and can drink")
 }
 
-// if case converted to a straight if
-// ----------------------------------------------------------------------------
+// if case converted to a basic if
 if (age >= 18) && (age <= 35) && (age >= 21) {
 	print("Cool and can drink")
 }
