@@ -209,27 +209,28 @@ default:
 
 
 // fallthrough
-// ----------------------------------------------------------------------------
+// -> automatically true due to fallthrough
 var numb = 6
 
 switch numb {
 case 0...6:
-	print("number")
-	fallthrough
-default:													// automatically true due to fallthrgh
-	print("number above")
+  print("number")
+  fallthrough
+default:													
+  print("number above")
 }
 
 
 // labeled statments
 // ----------------------------------------------------------------------------
 outerLoop: for x in 1...5 {
-	innerLoop: for y in 1...3 {
-		if y == 2 {
-			continue outerLoop
-		}
-		print("x = \(x), y = \(y)")											// o: x 1-5, y 1
-	}}
+  innerLoop: for y in 1...3 {
+    if y == 2 {
+      continue outerLoop
+    }
+    print("x = \(x), y = \(y)")											// o: x 1-5, y 1
+  }
+}
 
 
 // guard statment (loop)
