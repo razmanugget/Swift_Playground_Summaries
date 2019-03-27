@@ -89,17 +89,19 @@ if (1 < 3) {
 // ----------------------------------------------------------------------------
 // basic switch statement
 var statusCode = 404
-var errorString = "The request failed with error:"
+var errorString = "Request failed with error: "
 
 switch statusCode {
 case 100:
-	errorString += " Info, 100."
-case 201, 204:																	// compound case
-	errorString += " No content 2xx."
-case 400...417:																	// range case
-	errorString += " Client error, \(statusCode)"
+  errorString += "Info, 100."
+// compound case
+case 201, 204:																	
+  errorString += "No content 2xx."
+// range case
+case 400...417:																	
+  errorString += "Client error, \(statusCode)"
 default:
-	errorString = "\(statusCode) Unknown. Please try again."
+  errorString = "\(statusCode) Unknown."
 }
 
 
