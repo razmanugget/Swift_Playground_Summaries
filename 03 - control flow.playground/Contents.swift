@@ -107,28 +107,34 @@ default:
 
 
 // switch with tuple matching
+// -> That dog is 7
 var dogInfo = (7, "Fido")
 
 switch dogInfo {
-  // no due to case sensitivity
-case (7, "fido"):										
-	"Dat's fido who is 7"
-case (7, _):												// "_" -> wildcard
-	"Dat dog is 7"
+// no, due to case sensitivity
+case (7, "fido"):
+  "fido is 7"
+// "_" -> wildcard
+case (7, _):
+  "That dog is 7"
 default:
-	"Default dog"
+  "Default dog"
 }
 
 
 // switch with value bindings
-// ----------------------------------------------------------------------------
-switch dogInfo {
-case (let age, "Fido"):          // 1st tuple value bound in age
-	"That's Fido who is \(age)"
-case var (age, name):            // replaces default|assigns multiple
+// -> My dog Maxx is 8
+var dogInfo2 = (7, "Max")
+
+switch dogInfo2 {
+// 1st tuple value bound to age
+case (let age, "max"):          
+  "That's Max who is \(age)"
+// replaces default|assigns multiple
+case var (age, name):            
   age += 1
-  name = "Fido2"
-	"My dog \(name) is \(age)"
+  name = "Maxx"
+  "My dog \(name) is \(age)"
 }
 
 
