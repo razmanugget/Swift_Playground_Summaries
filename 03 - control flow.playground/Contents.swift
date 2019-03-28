@@ -222,13 +222,13 @@ default:
 
 
 // labeled statments
-// ----------------------------------------------------------------------------
+// -> x = 1-5, y = 1
 outerLoop: for x in 1...5 {
   innerLoop: for y in 1...3 {
     if y == 2 {
       continue outerLoop
     }
-    print("x = \(x), y = \(y)")											// o: x 1-5, y 1
+    print("x = \(x), y = \(y)")
   }
 }
 
