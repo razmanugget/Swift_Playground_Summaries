@@ -177,7 +177,7 @@ for i in 1...10 {
 	print(i)
 }
 
-// remove vowels
+// example: remove vowels
 // -> grtmndsthnklk
 let puzzleInput = "great minds think alike"
 var puzzleOutput = ""
@@ -209,7 +209,7 @@ default:
 
 
 // fallthrough
-// -> automatically true due to fallthrough
+// -> number above
 var numb = 6
 
 switch numb {
