@@ -235,19 +235,18 @@ outerLoop: for x in 1...5 {
 
 // guard statment (loop)
 // ----------------------------------------------------------------------------
+// in a loop -> 1, 2, 3, -4 isn't positive, 5
 let positiveArray = [1, 2, 3, -4, 5]
 
 for pos in positiveArray {
 	guard pos >= 0 else {
-		print("\(pos) isn't positive")						// o: -4 isn't positive
-		continue									// use break to completely leave the loop
+		print("\(pos) isn't positive")
+		continue
 	}
-	print("\(pos)")															// o: 1, 2, 3, 5
+	print("\(pos)")
 }
 
-
 // guard statment (function)
-// ----------------------------------------------------------------------------
 func greet(person: [String: String]) {
 	guard let personName = person["name"] else {
 		return
