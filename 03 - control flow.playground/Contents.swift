@@ -246,22 +246,36 @@ for pos in positiveArray {
 	print("\(pos)")
 }
 
-// guard statment (function)
-func greet(person: [String: String]) {
-	guard let personName = person["name"] else {
+// in a function -> 
+func greet(person: String?) {
+	guard let personName = person else {
+    print("Hello \(personName)")
 		return
 	}
-	print("Hello \(personName)")
-	
-	guard let location = person["location"] else {
-		print("I hope the weather is nice near you.")
-		return
-	}
-	print("I hope the weather is nice in \(location).")
+
 }
 
-greet(person: ["name": "John"])
-greet(person: ["name": "Jane", "location": "Cupertino"])
+greet(person: nil)
+greet(person: "John")
+
+
+
+//// in a function -> 
+//func greet(person: [String: String]) {
+//  guard let personName = person["name"] else {
+//    return
+//  }
+//  print("Hello \(personName)")
+//  
+//  guard let location = person["location"] else {
+//    print("I hope the weather is nice near you.")
+//    return
+//  }
+//  print("I hope the weather is nice in \(location).")
+//}
+//
+//greet(person: ["name": "John"])
+//greet(person: ["name": "Jane", "location": "Cupertino"])
 
 
 // early function exit if a condition is not met (guard)
