@@ -247,8 +247,8 @@ for pos in positiveArray {
 }
 
 // in a function -> 
-func greet(person: String?) {
-	guard let personName = person else {
+func greet(person: String) {
+	guard let personName = person as? String else {
     print("Hello \(personName)")
 		return
 	}
