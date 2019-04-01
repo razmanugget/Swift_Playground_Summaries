@@ -53,8 +53,10 @@ for reversedCount in (1...5).reversed() {
 }
 
 
+
 // while loop
 // ----------------------------------------------------------------------------
+
 // -> 1 2 3 (i = 4 at end)
 var i = 1
 while i <= 3 {
@@ -87,6 +89,7 @@ if (1 < 3) {
 
 // SWITCH
 // ----------------------------------------------------------------------------
+
 // basic switch statement
 var statusCode = 404
 var errorString = "Error: "
@@ -165,6 +168,8 @@ if (age >= 18) && (age <= 35) && (age >= 21) {
    print("Cool and can drink")
 }
 
+
+
 // Control Transfer Statements
 // ----------------------------------------------------------------------------
 
@@ -235,6 +240,7 @@ outerLoop: for x in 1...5 {
 
 // guard statment (loop)
 // ----------------------------------------------------------------------------
+
 // in a loop -> 1, 2, 3, -4 isn't positive, 5
 let positiveArray = [1, 2, 3, -4, 5]
 
