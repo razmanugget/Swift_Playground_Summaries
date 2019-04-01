@@ -5,8 +5,8 @@ import UIKit
 // comments
 // this is a single line comment
 /*
- this is a multi-line comment
- */
+   this is a multi-line comment
+*/
 
 
 // landmarks
@@ -31,7 +31,7 @@ import UIKit
 
 // click nada while holding option key
 func nada(this: NSString , that: NSString ) -> Int {
-  return (1)
+   return (1)
 }
 
 
@@ -140,7 +140,7 @@ print(longString)
 // iterating thru each character of name -> F i d o
 let dogName = "Fido"
 for dogChars in dogName {
-  print(dogChars)
+   print(dogChars)
 }
 
 // reversing -> odiF
@@ -158,22 +158,22 @@ var bookTitle = "  War and Peace  "
 
 // -> false (case sensitive)
 if bookTitle.range(of: "war") != nil {
-  print("war appears in the title")
+   print("war appears in the title")
 }
 
 // -> true (case insensitive)
 if bookTitle.range(of: "peace", options: .caseInsensitive) != nil {
-  print("peace appears in the title")
+   print("peace appears in the title")
 }
 
 // identify suffix -> true
 if bookTitle.hasPrefix("War") {
-  print("War first")
+   print("War first")
 }
 
 // identify prefix -> true
 if bookTitle.hasSuffix("Peace") {
-  print("Peace at end")
+   print("Peace at end")
 }
 
 // search and replace -> WarandPeace
@@ -209,12 +209,12 @@ NSString(string: newSubString.substring(from: 4)).substring(to: 3)
 // other String methods
 let mouseName = "Mickey"
 
-// counting characters-> 6 characters
+// counting characters-> 6
 var nameNum = (mouseName.count)
 
 // confirm contents
 if mouseName.isEmpty {
-  print("no mouse in here")
+   print("no mouse in here")
 }
 
 // change case
@@ -253,8 +253,8 @@ print("a = \(a) and e = \(e)")
 
 // function returning a tuple
 func getSongAndLength() 
-  -> (name: String, length: Int?) {
-    return ("Centerfold", 200)
+   -> (name: String, length: Int?) {
+      return ("Centerfold", 200)
 }
 
 // assignment of a tuple from a function
@@ -287,24 +287,24 @@ print(errorCodeStrg!)												// r: forced unwrap = "404"
 
 // forced unwrapping (!) with checking for nil
 if errorCodeStrg != nil {
-  print(errorCodeStrg!)											// forced unwrap r: "404"
+   print(errorCodeStrg!)											// forced unwrap r: "404"
 }
 
 
 // optional binding (if let ,)
 // ----------------------------------------------------------------------------
 if let errorCodeStrg = errorCodeStrg, possibleError == "123" {
-  print(errorCodeStrg)															// r: 404
+   print(errorCodeStrg)															// r: 404
 }
 
 
 // optional binding (while)
 // ----------------------------------------------------------------------------
 while isApple == true {
-  print(errorCodeStrg!)															// r: optional 404
-  errorCodeStrg = nil
-  
-  isApple = false
+   print(errorCodeStrg!)															// r: optional 404
+   errorCodeStrg = nil
+   
+   isApple = false
 }
 print(errorCodeStrg ?? "optional error")						// r: "opt error"
 
@@ -321,7 +321,7 @@ print(implicitInt ?? "optional")					// r: optional 44
 print(implicitInt!)												// r: 44  (forced unwrapping)
 
 if let boundInt = implicitInt {						// binding to non-optional
-  print(boundInt)													// r: 44
+   print(boundInt)													// r: 44
 }
 
 
@@ -378,12 +378,12 @@ print(nextlevel)
 // optional chaining class example
 // ----------------------------------------------------------------------------
 class Person {
-  var dog: Dog?
+   var dog: Dog?
 }
 
 class Dog {
-  var name: String
-  init(name: String) {self.name = name}
+   var name: String
+   init(name: String) {self.name = name}
 }
 
 let susie = Person()
@@ -396,23 +396,23 @@ let dog2 = susie.dog?.name          					// o: optional "Spot"
 // optional chaining with subscripts
 // ----------------------------------------------------------------------------
 class Site {
-  var title: String
-  var libraries: [Library]?
-  
-  init(title:String) {self.title = title}
+   var title: String
+   var libraries: [Library]?
+   
+   init(title:String) {self.title = title}
 }
 
 class Library {
-  var title: String
-  var documents: [Document]?
-  
-  init(title: String) {self.title = title}
+   var title: String
+   var documents: [Document]?
+   
+   init(title: String) {self.title = title}
 }
 
 class Document {
-  var title: String
-  
-  init(title: String) {self.title = title}
+   var title: String
+   
+   init(title: String) {self.title = title}
 }
 
 // creating the doc libary instance and linking to site
@@ -433,12 +433,12 @@ auditLibrary.documents?.append(auditDoc)
 let docName = acctSite.libraries?[0].documents?[0].title
 
 if let name = docName {
-  print("Document name is \(name).")
+   print("Document name is \(name).")
 } else {
-  print("Could not retrieve document name.")
+   print("Could not retrieve document name.")
 }
 
- 
+
 // nil coalescing operator (??)
 // ----------------------------------------------------------------------------
 var personalSite:String?
@@ -447,9 +447,9 @@ let defaultSite = "http://www.lyfebug.com"
 // without ?? operator
 var website:String
 if personalSite != nil {
-  website = personalSite!
+   website = personalSite!
 } else {
-  website = defaultSite
+   website = defaultSite
 }
 
 // with ?? operator
