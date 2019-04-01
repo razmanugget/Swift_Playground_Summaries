@@ -93,9 +93,9 @@ let defaultSite = "http://www.lyfebug.com"
 // without ?? operator
 let website: String
 if personalSite != nil {
-	website = personalSite!
+   website = personalSite!
 } else {
-	website = defaultSite
+   website = defaultSite
 }
 
 // with ?? operator
@@ -104,7 +104,7 @@ let website2 = personalSite ?? defaultSite
 
 // check Identity ===
 class C {
-	var varX = 1
+   var varX = 1
 }
 
 let classOne = C()
@@ -113,14 +113,14 @@ let classThree = classOne
 
 // -> might be equal...
 if classOne === classTwo {
-	print("Identical")
+   print("Identical")
 } else {
-	print("Maybe equal, but not identical")
+   print("Maybe equal, but not identical")
 }
 
 // -> Yes
 if classOne === classThree {
-	print("Yes, they refer to the same object.")
+   print("Yes, they refer to the same object.")
 }
 
 
@@ -129,13 +129,13 @@ if classOne === classThree {
 
 // closed (...)
 for hello in 1...5 {
-	print("\(hello)")
+   print("\(hello)")
 }
 
 // half-open (..<)
 let someArray = [8,4,3]
 for i in 0..<someArray.count {
-	print(someArray[i])
+   print(someArray[i])
 }
 
 
