@@ -4,34 +4,32 @@ import UIKit
 // ARRAYS
 // ----------------------------------------------------------------------------
 
-// declare only
-var array1: [String]															// cannot append
+// declaration only, cannot append
+var array1: [String]
 
-// declare and initialize
-var array2 = [Int]()															// empty
-var array25: [Int] = []														// works but longer
+// declaration - create/init with 0 value
+var array2 = [Int]()
+var array25: [Int] = []
 
-// declare and populate using inferred type
-var array3 = ["A", "B", "C"]											// preferred
+// create and initialize with an initial value (preferred)
+var array3 = ["A", "B", "C"]
 
 // declare and populate with repeated values
 var array4 = Array(repeating:"Zebra", count:3)
 
 // creating from a dictionary  (can use values also)
 let dict0 = [1: "first", 2: "second"]
-var array5 = Array(dict0.keys)										// o: 2, 1 (random)
+var array5 = Array(dict0.keys)
 
 
 // retrieval
-// ----------------------------------------------------------------------------
-let animal = array4[2]														// r: Zebra
-print(array3)																			// o: A, B, C
+//  -> Zebra
+let animal = array4[2]
+// -> A, B, C
+print(array3)
 
-var songs2: [String] = []
-songs2.append("Shake it Off")
 
 // add items (append, insert)
-// ----------------------------------------------------------------------------
 array2.append(2)														// add 1 item
 array3.append("D")													// add 1 item
 array2.append(contentsOf: [4, 5])						// add multiple items
