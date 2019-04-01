@@ -6,50 +6,50 @@ import Foundation
 
 // basic -> prints #'s
 for i in 1...10 {
-	print("i = \(i)")
+   print("i = \(i)")
 }
 
 // no counter access, just loops -> Hello 5x
 for _ in 1...5 {
-	print("Hello")
+   print("Hello")
 }
 
 // -> populates an array with 1-50
 var cellContent = [Int]()
 for i in 1...50 {
-	cellContent.append(i)
+   cellContent.append(i)
 }
 
 // -> prints each name
 let names = ["Jim", "John", "Jill"]
 for n in names {
-	print(n)
+   print(n)
 }
 
 // -> prints S w i f t
 for i: Character in "Swift" {
-	print(i)
+   print(i)
 }
 
 
 // loop - for in case where 
 // -> 3 6 9 12...
 for case let i in 1...50 where i % 3 == 0 {
-	print(i)
+   print(i)
 }
 
 
 // loop - for in stride 
 // -> 11 9 7...
 for count in stride(from: 11, to: 1, by: -2) {
-	print("\(count)")
+   print("\(count)")
 }
 
 
 // loop - for in reversed
 // -> 5 4 3...
 for reversedCount in (1...5).reversed() {
-  print("\(reversedCount)")
+   print("\(reversedCount)")
 }
 
 
@@ -58,8 +58,8 @@ for reversedCount in (1...5).reversed() {
 // -> 1 2 3 (i = 4 at end)
 var i = 1
 while i <= 3 {
-	print("i = \(i)")
-	i += 1
+   print("i = \(i)")
+   i += 1
 }
 
 
@@ -67,8 +67,8 @@ while i <= 3 {
 // -> 1 2 3 (j = 4 at end)
 var j = 1
 repeat {
-	print("j = \(j)")
-	j += 1
+   print("j = \(j)")
+   j += 1
 } while j <= 3
 
 
@@ -76,11 +76,11 @@ repeat {
 // ----------------------------------------------------------------------------
 // -> This is true
 if (1 < 3) {
-	print("This is true")
+   print("This is true")
 } else if (1 < 2) {
-	print("Yes, but not reached")
+   print("Yes, but not reached")
 } else {
-	print("Not true")
+   print("Not true")
 }
 
 
@@ -94,15 +94,15 @@ var errorString = "Error: "
 // -> Error: 404
 switch statusCode {
 case 100:
-  errorString += "Info, 100."
+   errorString += "Info, 100."
 // compound case
 case 201, 204:																	
-  errorString += "No content 2xx."
+   errorString += "No content 2xx."
 // range case
 case 400...417:																	
-  errorString += "\(statusCode)"
+   errorString += "\(statusCode)"
 default:
-  errorString = "\(statusCode) Unknown."
+   errorString = "\(statusCode) Unknown."
 }
 
 
@@ -113,12 +113,12 @@ let dogInfo1 = (7, "Fido")
 switch dogInfo1 {
 // no, due to case sensitivity
 case (7, "fido"):
-  "fido is 7"
+   "fido is 7"
 // "_" -> wildcard
 case (7, _):
-  "That dog is 7"
+   "That dog is 7"
 default:
-  "Default dog"
+   "Default dog"
 }
 
 
@@ -129,12 +129,12 @@ let dogInfo2 = (7, "Max")
 switch dogInfo2 {
 // 1st tuple value bound to age
 case (let age, "max"):          
-  "That's Max who is \(age)"
+   "That's Max who is \(age)"
 // replaces default|assigns multiple
 case var (age, name):            
-  age += 1
-  name = "Maxx"
-  "My dog \(name) is \(age)"
+   age += 1
+   name = "Maxx"
+   "My dog \(name) is \(age)"
 }
 
 
@@ -144,11 +144,11 @@ let dogInfo3 = (7, "Spot")
 
 switch dogInfo3 {
 case let (_, name) where name == "spot":
-	"Is that spot?"
+   "Is that spot?"
 case let (age, name) where age == 7:
-	"\(name) is \(age)"
+   "\(name) is \(age)"
 default:
-	"default dog"
+   "default dog"
 }
 
 
@@ -157,12 +157,12 @@ default:
 let age = 25
 
 if case 18...35 = age, age >= 21 {
-	print("Cool and can drink")
+   print("Cool and can drink")
 }
 
 // if case converted to a basic if
 if (age >= 18) && (age <= 35) && (age >= 21) {
-	print("Cool and can drink")
+   print("Cool and can drink")
 }
 
 // Control Transfer Statements
@@ -171,10 +171,10 @@ if (age >= 18) && (age <= 35) && (age >= 21) {
 // continue
 // -> 1, 2, 3, 8, 9, 10
 for i in 1...10 {
-	if (i >= 4 && i <= 7) {
-		continue
-	}
-	print(i)
+   if (i >= 4 && i <= 7) {
+      continue
+   }
+   print(i)
 }
 
 // example: remove vowels
@@ -183,12 +183,12 @@ let puzzleInput = "great minds think alike"
 var puzzleOutput = ""
 
 for char in puzzleInput {
-  switch char {
-  case "a", "e", "i", "o", "u", " ":
-    continue
-  default:
-    puzzleOutput.append(char)
-  }
+   switch char {
+   case "a", "e", "i", "o", "u", " ":
+      continue
+   default:
+      puzzleOutput.append(char)
+   }
 }
 print(puzzleOutput)												
 
@@ -196,15 +196,15 @@ print(puzzleOutput)
 // break
 // -> 1, 2, 3
 for i in 1...10 {
-  if (i >= 4) && (i <= 7) {
-    break
-  }
-  print(i)
+   if (i >= 4) && (i <= 7) {
+      break
+   }
+   print(i)
 }
 
 switch puzzleOutput {
 default:
-  break
+   break
 }
 
 
@@ -214,22 +214,22 @@ var numb = 6
 
 switch numb {
 case 0...6:
-  print("number")
-  fallthrough
+   print("number")
+   fallthrough
 default:													
-  print("number above")
+   print("number above")
 }
 
 
 // labeled statments
 // -> x = 1-5, y = 1
 outerLoop: for x in 1...5 {
-  innerLoop: for y in 1...3 {
-    if y == 2 {
-      continue outerLoop
-    }
-    print("x = \(x), y = \(y)")
-  }
+   innerLoop: for y in 1...3 {
+      if y == 2 {
+         continue outerLoop
+      }
+      print("x = \(x), y = \(y)")
+   }
 }
 
 
@@ -239,21 +239,21 @@ outerLoop: for x in 1...5 {
 let positiveArray = [1, 2, 3, -4, 5]
 
 for pos in positiveArray {
-	guard pos >= 0 else {
-		print("\(pos) isn't positive")
-		continue
-	}
-	print("\(pos)")
+   guard pos >= 0 else {
+      print("\(pos) isn't positive")
+      continue
+   }
+   print("\(pos)")
 }
 
 
 // in a function -> optional parameter
 func greet(person: String?) {
-  guard let personName = person else {
-    print ("Hey no name")
-    return
-  }
-  print("Hello \(personName)")
+   guard let personName = person else {
+      print ("Hey no name")
+      return
+   }
+   print("Hello \(personName)")
 }
 
 // -> Hello John
@@ -263,58 +263,50 @@ greet(person: nil)
 
 
 // early function exit if a condition is not met (guard)
-func greetMidName(name: (first: String, last: String?)) -> Int {
-	guard name.last != nil else {
-		print("Hey there")
-		return 0
-	}
-	return 1
+func greetLastName(name: (first: String, last: String?)) -> Int {
+   guard name.last != nil else {
+      print("Last name required")
+      return 0
+   }
+   return 1
 }
-greetMidName(name: ("Matt", nil))
 
-
-//// early function exit if a condition is not met (guard)
-//// ----------------------------------------------------------------------------
-//func greetMidName(name: (ft: String, mid: String?, last: String)) -> Int {
-//  guard name.mid != nil else {
-//    print("Hey there")
-//    return 0
-//  }
-//  return 1
-//}
-//greetMidName(name: ("Matt", nil, "Mathias"))
+// -> Last name required, exit with return 0
+greetLastName(name: ("Matt", nil))
 
 
 
-//// guard statment - place in a Project to avoid errors
-//// ----------------------------------------------------------------------------
+
+// guard statment - place in a Project to avoid errors
+// ----------------------------------------------------------------------------
 //func sendToServer(name: String, address: String) {
-//  print("sending stuff")
+//   print("sending stuff")
 //}
 //
 //func guardSubmit() {
-//  guard let name = nameField.text else {
-//    print("No name to submit")
-//    return
-//  }
-//  guard let address = address.Field.text else {
-//    print("No address to submit")
-//    return
-//  }
-//  sendToServer(name, address: String)
+//   guard let name = nameField.text else {
+//      print("No name to submit")
+//      return
+//   }
+//   guard let address = addressField.text else {
+//      print("No address to submit")
+//      return
+//   }
+//   sendToServer(name: name, address: address)
 //}
 //
 //// without guard statment - place in a Project to avoid errors
 //func nonguardSubmit() {
-//  if let name = nameField.text {            // pyramid of doom
-//    if let address = addressField.text {    // just starting here
-//      sendToServer(name, address: address)
-//    } else {
-//      print("no address to submit")
-//    }
-//  } else {
-//    print("no name to submit")
-//  }
+//   // pyramid of doom starts here
+//   if let name = nameField.text {
+//      if let address = addressField.text {
+//         sendToServer(name: name, address: address)
+//      } else {
+//         print("no address to submit")
+//      }
+//   } else {
+//      print("no name to submit")
+//   }
 //}
 
 
