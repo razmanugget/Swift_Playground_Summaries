@@ -25,36 +25,48 @@ var array5 = Array(dict0.keys)
 // retrieval
 //  -> Zebra
 let animal = array4[2]
+
 // -> A, B, C
 print(array3)
 
 
-// add items (append, insert)
-array2.append(2)														// add 1 item
-array3.append("D")													// add 1 item
-array2.append(contentsOf: [4, 5])						// add multiple items
-array2.append(contentsOf: 1...6)						// add a range of Ints
+// add items
+// add 1 item -> 2
+array2.append(2)
+
+// add multiple items -> 2, 4, 5
+array2.append(contentsOf: [4, 5])
+
+// add a range of Ints -> 2, 4, 5, 1, 2...
+array2.append(contentsOf: 1...6)
+print(array2)
 
 // shorthand method (+/=)
-array3 += ["E", "F"]												// adds multiple
-array3 = ["Pears"]													// clears except for item
-
-// add at a specific point (insert)
-array3.insert("Pineapples", at: 0)
+// adds multiple -> A, B, C, D, E
+array3 += ["D", "E"]
 
 // concatenate 2 arrays (index #'s continue after 1st array)
+// -> Kiwi, Pears, Kiwi, Pears
 array3 += array3
+
+// clears except for item -> Pears
+array3 = ["Pears"]
+
+// add at a specific point (insert) -> Kiwi, Pears
+array3.insert("Kiwi", at: 0)
+print(array3)
 
 
 // remove items
-// ----------------------------------------------------------------------------
+print(array2)
 array2
+print(array2)
 
-// all index #'s shift down
-array2.remove(at: 0)										// o: returns the item removed
+// all index #'s shift down -> returns 2
+array2.remove(at: 0)
 
-// the removed item is returned. a new var can = it
-array2.removeLast()											// o: returns the item removed
+// -> returns 6
+array2.removeLast()
 
 // removes all, but array stays initialized
 array2.removeAll(keepingCapacity: true)
@@ -65,21 +77,21 @@ array2 = []
 // ----------------------------------------------------------------------------
 array3[1] = "Peaches"												// overwrites
 array3[1] += " and cream"										// adds via concatenation
-array3[2...3] = ["Bandanas", "Straws"]			// overwrites multiple
+//array3[2...3] = ["Bandanas", "Straws"]         // overwrites multiple
 
 
 // iterating
 // ----------------------------------------------------------------------------
 for i in array3 {
-	print("i = \(i)")
+   print("i = \(i)")
 }
 
 for index in 0 ..< array3.count {
-	print("The fruit is \(array3[index]) at index: \(index)")
+   print("The fruit is \(array3[index]) at index: \(index)")
 }
 
 for (index, fruit) in array3.enumerated() {
-	print("The fruit is \(fruit) at index: \(index)")
+   print("The fruit is \(fruit) at index: \(index)")
 }
 
 
@@ -123,11 +135,11 @@ let counts = Dictionary(mappedItems, uniquingKeysWith: +)
 // find differences between two arrays with an extension
 // ----------------------------------------------------------------------------
 extension Array where Element: Hashable {
-  func difference(from other: [Element]) -> [Element] {
-    let thisSet = Set(self)
-    let otherSet = Set(other)
-    return Array(thisSet.symmetricDifference(otherSet))
-  }
+   func difference(from other: [Element]) -> [Element] {
+      let thisSet = Set(self)
+      let otherSet = Set(other)
+      return Array(thisSet.symmetricDifference(otherSet))
+   }
 }
 let names1 = ["John", "Paul", "Ringo"]
 let names2 = ["Ringo", "Paul", "George"]
@@ -220,7 +232,7 @@ set2.remove("Oranges")                        // remove items
 // iterating
 // ----------------------------------------------------------------------------
 for fruit in set2 {
-	print("\(fruit)")
+   print("\(fruit)")
 }
 
 set1
