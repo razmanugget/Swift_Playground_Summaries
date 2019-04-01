@@ -246,81 +246,76 @@ for pos in positiveArray {
 	print("\(pos)")
 }
 
-// in a function -> 
-func greet(person: String) {
-	guard let personName = person as? String else {
-    print("Hello \(personName)")
-		return
-	}
 
+// in a function -> optional parameter
+func greet(person: String?) {
+  guard let personName = person else {
+    print ("Hey no name")
+    return
+  }
+  print("Hello \(personName)")
 }
 
-greet(person: nil)
+// -> Hello John
 greet(person: "John")
-
-
-
-//// in a function -> 
-//func greet(person: [String: String]) {
-//  guard let personName = person["name"] else {
-//    return
-//  }
-//  print("Hello \(personName)")
-//  
-//  guard let location = person["location"] else {
-//    print("I hope the weather is nice near you.")
-//    return
-//  }
-//  print("I hope the weather is nice in \(location).")
-//}
-//
-//greet(person: ["name": "John"])
-//greet(person: ["name": "Jane", "location": "Cupertino"])
+// -> Hey no name
+greet(person: nil)
 
 
 // early function exit if a condition is not met (guard)
-// ----------------------------------------------------------------------------
-func greetMidName(name: (ft: String, mid: String?, last: String)) -> Int {
-	guard name.mid != nil else {
+func greetMidName(name: (first: String, last: String?)) -> Int {
+	guard name.last != nil else {
 		print("Hey there")
 		return 0
 	}
 	return 1
 }
-greetMidName(name: ("Matt", nil, "Mathias"))
+greetMidName(name: ("Matt", nil))
 
 
-/*
-// guard statment - place in a Project to avoid errors
-// ----------------------------------------------------------------------------
-func sendToServer(name: String, address: String) {
-	print("sending stuff")
-}
+//// early function exit if a condition is not met (guard)
+//// ----------------------------------------------------------------------------
+//func greetMidName(name: (ft: String, mid: String?, last: String)) -> Int {
+//  guard name.mid != nil else {
+//    print("Hey there")
+//    return 0
+//  }
+//  return 1
+//}
+//greetMidName(name: ("Matt", nil, "Mathias"))
 
-func guardSubmit() {
-	guard let name = nameField.text else {
-		print("No name to submit")
-		return
-	}
-	guard let address = address.Field.text else {
-		print("No address to submit")
-		return
-	}
-	sendToServer(name, address: String)
-}
 
-// without guard statment - place in a Project to avoid errors
-func nonguardSubmit() {
-	if let name = nameField.text {						// pyramid of doom
-		if let address = addressField.text {		// just starting here
-			sendToServer(name, address: address)
-		} else {
-			print("no address to submit")
-		}
-	} else {
-		print("no name to submit")
-	}
-}
-*/
+
+//// guard statment - place in a Project to avoid errors
+//// ----------------------------------------------------------------------------
+//func sendToServer(name: String, address: String) {
+//  print("sending stuff")
+//}
+//
+//func guardSubmit() {
+//  guard let name = nameField.text else {
+//    print("No name to submit")
+//    return
+//  }
+//  guard let address = address.Field.text else {
+//    print("No address to submit")
+//    return
+//  }
+//  sendToServer(name, address: String)
+//}
+//
+//// without guard statment - place in a Project to avoid errors
+//func nonguardSubmit() {
+//  if let name = nameField.text {            // pyramid of doom
+//    if let address = addressField.text {    // just starting here
+//      sendToServer(name, address: address)
+//    } else {
+//      print("no address to submit")
+//    }
+//  } else {
+//    print("no name to submit")
+//  }
+//}
+
 
 
