@@ -58,9 +58,7 @@ print(array3)
 
 
 // remove items
-print(array2)
 array2
-print(array2)
 
 // all index #'s shift down -> returns 2
 array2.remove(at: 0)
@@ -77,8 +75,9 @@ array2 = []
 // overwrites -> .1 = Peaches
 array3[1] = "Peaches"
 // adds via concatenation -> .1 = Peaches and cream
-array3[1] += " and cream"										
-//array3[2...3] = ["Bandanas", "Straws"]         // overwrites multiple
+array3[1] += " and cream"
+// overwrites multiple
+array3[1...2] = ["Bands", "Straws"]         
 
 
 // iterating
