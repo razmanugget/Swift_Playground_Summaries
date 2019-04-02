@@ -74,9 +74,10 @@ array2 = []
 
 
 // change items
-// ----------------------------------------------------------------------------
-array3[1] = "Peaches"												// overwrites
-array3[1] += " and cream"										// adds via concatenation
+// overwrites -> .1 = Peaches
+array3[1] = "Peaches"
+// adds via concatenation -> .1 = Peaches and cream
+array3[1] += " and cream"										
 //array3[2...3] = ["Bandanas", "Straws"]         // overwrites multiple
 
 
