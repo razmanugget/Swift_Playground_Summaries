@@ -74,23 +74,28 @@ array2 = []
 // change items
 // overwrites -> .1 = Peaches
 array3[1] = "Peaches"
+
 // adds via concatenation -> .1 = Peaches and cream
 array3[1] += " and cream"
+
 // overwrites multiple -> Zebra, Fox, Mice
-array4[1...2] = ["Fox", "Mice"]         
+array4[1...2] = ["Fox", "Mice"]
 
 
 // iterating
+// -> Zebra, Bands, Straws
 for i in array3 {
    print("i = \(i)")
 }
 
+// -> Fruit: Kiwi at: 0...
 for index in 0 ..< array3.count {
-   print("The fruit is \(array3[index]) at index: \(index)")
+   print("Fruit: \(array3[index]) at: \(index)")
 }
 
+// naming both -> Fruit: Kiwi at: 0...
 for (index, fruit) in array3.enumerated() {
-   print("The fruit is \(fruit) at index: \(index)")
+   print("Fruit: \(fruit) at: \(index)")
 }
 
 
