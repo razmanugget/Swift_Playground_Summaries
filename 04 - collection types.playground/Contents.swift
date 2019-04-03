@@ -76,12 +76,11 @@ array2 = []
 array3[1] = "Peaches"
 // adds via concatenation -> .1 = Peaches and cream
 array3[1] += " and cream"
-// overwrites multiple
-array3[1...2] = ["Bands", "Straws"]         
+// overwrites multiple -> Zebra, Fox, Mice
+array4[1...2] = ["Fox", "Mice"]         
 
 
 // iterating
-// ----------------------------------------------------------------------------
 for i in array3 {
    print("i = \(i)")
 }
