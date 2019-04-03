@@ -100,25 +100,25 @@ for (index, fruit) in array3.enumerated() {
 
 
 // multiple type arrays
-// ----------------------------------------------------------------------------
+// -> Array<Any>.Type
 var songs: [Any] = ["Rose", "Bud", 3]
 type(of: songs)
 
 
 // miscellaneous functions
-// ----------------------------------------------------------------------------
-
-// count the # of items in the array
+// count the # of items -> 0
 array2.count
 
-// returns a Bool (true = empty)
+// returns a Bool (true = empty) -> true
 array2.isEmpty
 
 // shows if the array contains a certain value (true = yes)
 array3.contains("Bandanas")
 
 // assigning value to first|last items
+// -> Kiwi
 let firstFruit = array3.first
+// -> Peaches and cream
 let lastFruit = array3.last
 
 
