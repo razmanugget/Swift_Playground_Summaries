@@ -122,11 +122,6 @@ let firstFruit = array3.first
 let lastFruit = array3.last
 
 
-// built-in closures
-// ----------------------------------------------------------------------------
-
-// see functions | closures for examples
-
 
 // Advanced Array Manipulation
 
@@ -150,18 +145,16 @@ let differenceInArrays = names1.difference(from: names2)
 
 
 // DICTIONARIES
-
-// declaration
 // ----------------------------------------------------------------------------
 
-// declare only
+/// declaration - create but don't initialize
 var dict1: [String: Int]
 
-// declare and initialize
+// declaration - create/init with 0 value
 var dict2: [String: Int] = [:]
 var dict3 = [String: Int]()
 
-// declare, init, populate
+// create and initialize with an initial value (preferred)
 var dict4 = ["AZ":2, "AL":1]
 
 
