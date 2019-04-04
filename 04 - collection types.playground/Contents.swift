@@ -129,15 +129,14 @@ let lastFruit = array3.last
 
 
 // Advanced Array Manipulation
+
 // counting frequencies in an array
-// ----------------------------------------------------------------------------
 let items = ["a", "b", "a", "c"]
 let mappedItems = items.map { ($0, 1) }
 let counts = Dictionary(mappedItems, uniquingKeysWith: +)
 
 
 // find differences between two arrays with an extension
-// ----------------------------------------------------------------------------
 extension Array where Element: Hashable {
    func difference(from other: [Element]) -> [Element] {
       let thisSet = Set(self)
@@ -151,6 +150,7 @@ let differenceInArrays = names1.difference(from: names2)
 
 
 // DICTIONARIES
+
 // declaration
 // ----------------------------------------------------------------------------
 
