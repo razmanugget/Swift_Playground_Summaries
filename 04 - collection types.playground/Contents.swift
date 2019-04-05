@@ -156,7 +156,7 @@ var dict1: [String: Int]
 var dict2: [String: Int] = [:]
 var dict3 = [String: Int]()
 
-// create and initialize with an initial value (preferred)
+// create and initialize with initial values
 var dict4 = ["AZ":2, "AL":1]
 
 
@@ -213,28 +213,29 @@ for value in dict4.values {
 // SETS
 // ----------------------------------------------------------------------------
 
-// declare and initialize
+// declaration - create/init with 0 value
 var set1 = Set<String>()
 
-// declare, init, populate
+// create and initialize with initial values
 var set2: Set = ["Apples","Oranges", "Straw"]
 
+var set3 = Set<String>()
 
-// add / remove items
-// ----------------------------------------------------------------------------
-set1.insert("Apples")                         // add items
-set2.remove("Oranges")                        // remove items
-//set2 = []																			// remove all items
+
+// add items
+set1.insert("Apples")
+
+// remove items
+set2.remove("Oranges")
+
+// remove all items
+set3 = []
 
 
 // iterating
-// ----------------------------------------------------------------------------
 for fruit in set2 {
    print("\(fruit)")
 }
-
-set1
-set2
 
 
 // count set objects
@@ -259,7 +260,7 @@ set7.count(for: "Apples")                     // o: 2
 let hasItem = set2.contains("Apples")             // o: true
 
 // combining sets (dups are removed)
-var set3 = set1.union(set2)												// o: apples, straw
+set3 = set1.union(set2)												// o: apples, straw
 
 // returning duplicates (intersect)
 let set4 = set1.intersection(set2)								// o: apples
