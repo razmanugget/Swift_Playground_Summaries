@@ -194,26 +194,23 @@ dict4.isEmpty
 
 
 // iterating over items
-// ----------------------------------------------------------------------------
-
-// prints keys and values
-for (key, value) in dict3 {
-   print("key:\(key), value:\(value)")
+// print keys and values -> key: MT, value: 7
+for (key, value) in dict4 {
+   print("key: \(key), value:\(value)")
 }
 
-// print the keys
-for key in dict3.keys {
-   print("key:\(key)")
+// print keys -> key: MT
+for key in dict4.keys {
+   print("key: \(key)")
 }
 
-// print the values
-for value in dict3.values {
-   print("values:\(value)")
+// print values -> values: 7
+for value in dict4.values {
+   print("values: \(value)")
 }
 
 
 // SETS
-// declaration
 // ----------------------------------------------------------------------------
 
 // declare and initialize
