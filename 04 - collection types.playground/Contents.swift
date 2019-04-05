@@ -217,22 +217,22 @@ for value in dict4.values {
 var set1 = Set<String>()
 
 // create and initialize with initial values
-var set2: Set = ["Apples","Oranges", "Straw"]
+var set2: Set = ["apples","oranges", "straw"]
 
 var set3 = Set<String>()
 
 
 // add items
-set1.insert("Apples")
+set1.insert("apples")
 
 // remove items
-set2.remove("Oranges")
+set2.remove("oranges")
 
 // remove all items
 set3 = []
 
 
-// -> Apples, Straw
+// -> apples, straw
 for fruit in set2 {
    print("\(fruit)")
 }
@@ -244,35 +244,33 @@ set2.count
 
 // count instances in a set - requires NSCountedSet
 var NSSet1 = NSCountedSet()
-NSSet1 = ["Apples","Oranges", "Straw"]
-NSSet1.add("Apples")
+NSSet1 = ["apples","oranges", "straw"]
+NSSet1.add("apples")
 
 // -> 3
 NSSet1.count
 // -> 2
-NSSet1.count(for: "Apples")
+NSSet1.count(for: "apples")
 
 
 // fundamental set operations
 // referencing / contains -> true
-let hasItem = set2.contains("Apples")
+let hasItem = set2.contains("apples")
 
-// combining sets (dups are removed)
-set3 = set1.union(set2)												// o: apples, straw
+// combining sets (dups are removed) -> apples, straw
+set3 = set1.union(set2)
 
-// returning duplicates (intersect)
-let set4 = set1.intersection(set2)								// o: apples
+// returning duplicates (intersect) -> apples
+let set4 = set1.intersection(set2)
 
-// subtract out values
-let set5 = set2.subtracting(set1)									// o: straw
+// subtract out values -> straw
+let set5 = set2.subtracting(set1)
 
-// show only differences
-let set6 = set1.symmetricDifference(set2)					// o: straw
+// show only differences -> straw
+let set6 = set1.symmetricDifference(set2)
 
 
 // membership and equality operations
-// ----------------------------------------------------------------------------
-
 // are all items unique btwn 2 sets? (t/f)
 let isUnique = set1.isDisjoint(with: set2)				// o: false
 
