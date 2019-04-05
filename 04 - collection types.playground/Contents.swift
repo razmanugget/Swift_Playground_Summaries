@@ -255,7 +255,7 @@ NSSet1.count(for: "Apples")
 
 // fundamental set operations
 // referencing / contains -> true
-let hasItem = set2.contains("Apples")             // o: true
+let hasItem = set2.contains("Apples")
 
 // combining sets (dups are removed)
 set3 = set1.union(set2)												// o: apples, straw
