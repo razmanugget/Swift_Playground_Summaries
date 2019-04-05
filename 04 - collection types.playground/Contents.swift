@@ -232,31 +232,29 @@ set2.remove("Oranges")
 set3 = []
 
 
-// iterating
+// -> Apples, Straw
 for fruit in set2 {
    print("\(fruit)")
 }
 
 
-// count set objects
-// ----------------------------------------------------------------------------
-set2.count                                    // o: 2
+// counting
+// count set objects -> 2
+set2.count
 
-// count changes in a set - NSCountedSet()
-// ----------------------------------------------------------------------------
-var set7 = NSCountedSet()
-set7 = ["Apples","Oranges", "Straw"]
-set7.add("Apples")
+// count instances in a set - requires NSCountedSet
+var NSSet1 = NSCountedSet()
+NSSet1 = ["Apples","Oranges", "Straw"]
+NSSet1.add("Apples")
 
-set7.count                                    // o: 3
-set7.count(for: "Apples")                     // o: 2
-
+// -> 3
+NSSet1.count
+// -> 2
+NSSet1.count(for: "Apples")
 
 
 // fundamental set operations
-// ----------------------------------------------------------------------------
-
-// referencing (contains)
+// referencing / contains -> true
 let hasItem = set2.contains("Apples")             // o: true
 
 // combining sets (dups are removed)
