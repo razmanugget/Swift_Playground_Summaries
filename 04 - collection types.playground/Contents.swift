@@ -124,6 +124,7 @@ let lastFruit = array3.last
 
 
 // Advanced Array Manipulation
+// ----------------------------------------------------------------------------
 
 // counting frequencies in an array
 let items = ["a", "b", "a", "c"]
@@ -144,10 +145,11 @@ let names2 = ["Ringo", "Paul", "George"]
 let differenceInArrays = names1.difference(from: names2)
 
 
+
 // DICTIONARIES
 // ----------------------------------------------------------------------------
 
-/// declaration - create but don't initialize
+// declaration - create but don't initialize
 var dict1: [String: Int]
 
 // declaration - create/init with 0 value
@@ -159,30 +161,32 @@ var dict4 = ["AZ":2, "AL":1]
 
 
 // add & change items
-// ----------------------------------------------------------------------------
+// direct add -> NY, 2
+dict3["NY"] = 5
 
-// direct add or value change
-dict3["NY"] = 5												// added
-dict4["AL"] = 3												// value changed
+// value changed -> AL, 3
+dict4["AL"] = 3
 
 // will insert or change (and return the old value)
 dict4.updateValue(7, forKey: "MT")
 
 
 // remove items
-// ----------------------------------------------------------------------------
-dict4.removeValue(forKey: "AZ")       // removes & returns value
-dict4["AL"] = nil											// will remove the pair
-dict4 = [:]														// entire dictionary cleared
+// -> returns 2
+dict4.removeValue(forKey: "AZ")
+
+// will remove the pair -> no return
+dict4["AL"] = nil
+
+// entire dictionary cleared
+dict3 = [:]
 
 
 // miscellaneous
-// ----------------------------------------------------------------------------
+// referencing (no dot notation / unordered) -> optional 7
+let state = dict4["MT"]
 
-// referencing
-let state = dict4["AL"]								// no dot notation (unordered)
-
-// count the # of items in the dictionary
+// count the # of items in the dictionary -> 1
 dict4.count
 
 // returns a Bool (true = empty)
