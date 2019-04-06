@@ -271,8 +271,8 @@ let set6 = set1.symmetricDifference(set2)
 
 
 // membership and equality operations
-// are all items unique btwn 2 sets? (t/f)
-let isUnique = set1.isDisjoint(with: set2)				// o: false
+// are all items unique btwn 2 sets? (t/f) -> false
+let isUnique = set1.isDisjoint(with: set2)
 
 // are all values of the 1st set contained in the 2nd (t/f)
 let isContained = set1.isSubset(of: set2)					// o: true
