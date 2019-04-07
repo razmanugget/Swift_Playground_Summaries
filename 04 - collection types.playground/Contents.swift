@@ -274,11 +274,11 @@ let set6 = set1.symmetricDifference(set2)
 // are all items unique btwn 2 sets? (t/f) -> false
 let isUnique = set1.isDisjoint(with: set2)
 
-// are all values of the 1st set contained in the 2nd (t/f)
-let isContained = set1.isSubset(of: set2)					// o: true
+// are all values of the 1st set contained in the 2nd (t/f) -> true
+let isContained = set1.isSubset(of: set2)
 
-// does the 1st set contain all values of the 2nd (t/f)
-let isSuper = set1.isSuperset(of: set2)						// o: false
+// does the 1st set contain all values of the 2nd (t/f) -> false
+let isSuper = set1.isSuperset(of: set2)
 
 
 
