@@ -282,21 +282,22 @@ let isSuper = set1.isSuperset(of: set2)
 
 
 
-// testing pass by value for dicts and arrays
-// ----------------------------------------------------------------------------
-var dictA = [1: 1, 2: 4, 3: 9, 4: 16]
+// dictionaries pass by value
+var dictA = [1: 1, 2: 2, 3: 3]
 var dictB = dictA
+dictB[3] = nil
 
-dictB[4] = nil
-
+// -> 1: 1, 2: 2, 3: 3
 dictA
+// -> 1: 1, 2: 2
 dictB
 
-
-var arrayA = [1, 2, 3, 4, 5]
+// arrays pass by value
+var arrayA = [1, 2, 3]
 var arrayB = arrayA
-
 arrayB[0] = 10
 
+// -> 1, 2, 3
 arrayA
+// -> 10, 2, 3
 arrayB
