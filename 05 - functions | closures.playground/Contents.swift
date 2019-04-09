@@ -5,30 +5,29 @@ import Foundation
 // FUNCTIONS
 // ----------------------------------------------------------------------------
 
-func greeting(){
+func greet0(){
 	print("Hello World")											
 }
 // nothing returned -> Hello World
-greeting()
+greet0()
 
 
-func greeting2() -> String {
+func greet1() -> String {
 	return "Hello World"
 }
 // returns -> "Hello World"
-greeting2()
+greet1()
 
 
 // parameters
-// ----------------------------------------------------------------------------
 func greetName(name: String) -> String {
 	return "Hello \(name)"
 }
-greetName(name: "World")											// o: "Hello World"
+// -> "Hello World"
+greetName(name: "World")
 
 
 // multiple parameters
-// ----------------------------------------------------------------------------
 func greetName2(greet: String, name: String) {
 	print("\(greet) \(name)")
 }
