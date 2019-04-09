@@ -1,9 +1,10 @@
 import UIKit
 import Foundation
 
+
 // FUNCTIONS
-// basic
 // ----------------------------------------------------------------------------
+
 func greeting(){
 	print("Hello World")											// o: Hello World
 }
@@ -248,7 +249,7 @@ print("zero!")
 
 // nested functions (other example)
 // ----------------------------------------------------------------------------
-func bankVault(passcode:String) -> String {
+func bankVault(passcode: String) -> String {
 	func openBankVault() -> String {
 		return "Vault opened"
 	}
