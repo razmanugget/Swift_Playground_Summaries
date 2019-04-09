@@ -122,6 +122,17 @@ let firstFruit = array3.first
 let lastFruit = array3.last
 
 
+// arrays pass by value
+var arrayA = [1, 2, 3]
+var arrayB = arrayA
+arrayB[0] = 10
+
+// -> 1, 2, 3
+arrayA
+// -> 10, 2, 3
+arrayB
+
+
 
 // Advanced Array Manipulation
 // ----------------------------------------------------------------------------
@@ -182,17 +193,6 @@ dict4["AL"] = nil
 dict3 = [:]
 
 
-// miscellaneous
-// referencing (no dot notation / unordered) -> optional 7
-let state = dict4["MT"]
-
-// count the # of items in the dictionary -> 1
-dict4.count
-
-// returns a Bool (true = empty)
-dict4.isEmpty
-
-
 // iterating over items
 // print keys and values -> key: MT, value: 7
 for (key, value) in dict4 {
@@ -208,6 +208,29 @@ for key in dict4.keys {
 for value in dict4.values {
    print("values: \(value)")
 }
+
+
+// miscellaneous
+// referencing (no dot notation / unordered) -> optional 7
+let state = dict4["MT"]
+
+// count the # of items in the dictionary -> 1
+dict4.count
+
+// returns a Bool (true = empty)
+dict4.isEmpty
+
+
+// dictionaries pass by value
+var dictA = [1: 1, 2: 2, 3: 3]
+var dictB = dictA
+dictB[3] = nil
+
+// -> 1: 1, 2: 2, 3: 3
+dictA
+// -> 1: 1, 2: 2
+dictB
+
 
 
 // SETS
@@ -279,25 +302,3 @@ let isContained = set1.isSubset(of: set2)
 
 // are all 2nd set values contained in the 1st? (t/f) -> false
 let isSuper = set1.isSuperset(of: set2)
-
-
-
-// dictionaries pass by value
-var dictA = [1: 1, 2: 2, 3: 3]
-var dictB = dictA
-dictB[3] = nil
-
-// -> 1: 1, 2: 2, 3: 3
-dictA
-// -> 1: 1, 2: 2
-dictB
-
-// arrays pass by value
-var arrayA = [1, 2, 3]
-var arrayB = arrayA
-arrayB[0] = 10
-
-// -> 1, 2, 3
-arrayA
-// -> 10, 2, 3
-arrayB
