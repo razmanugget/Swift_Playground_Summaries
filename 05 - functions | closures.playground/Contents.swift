@@ -36,14 +36,14 @@ greetWorld3(greet: "Hello", name: "World")
 
 
 // tuples
-func greetName3(greet: String, ID: (name:String, age:Int)) {
+func greetName0(greet: String, ID: (name:String, age:Int)) {
 	print("\(greet) \(ID.name), who is \(ID.age)")
 }
-greetName3(greet: "Hello", ID: (name:"Matt", age:5))
+// -> Hello Matt, who is 5
+greetName0(greet: "Hello", ID: (name:"Matt", age:5))
 
 
 // multiple named returns (a tuple)
-// ----------------------------------------------------------------------------
 func thisFuncReturnsATuple() -> (a: Int, b: Int, c: Int) {
 	return (1,2,3)
 }
