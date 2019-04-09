@@ -6,15 +6,17 @@ import Foundation
 // ----------------------------------------------------------------------------
 
 func greeting(){
-	print("Hello World")											// o: Hello World
+	print("Hello World")											
 }
-greeting()																	// o: nothing returned
+// nothing returned -> Hello World
+greeting()
 
 
 func greeting2() -> String {
 	return "Hello World"
 }
-greeting2()																	// o: "Hello World"
+// returns -> "Hello World"
+greeting2()
 
 
 // parameters
