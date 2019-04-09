@@ -5,33 +5,34 @@ import Foundation
 // FUNCTIONS
 // ----------------------------------------------------------------------------
 
-func greet0(){
+func greetWorld0(){
 	print("Hello World")											
 }
 // nothing returned -> Hello World
-greet0()
+greetWorld0()
 
 
-func greet1() -> String {
+func greetWorld1() -> String {
 	return "Hello World"
 }
 // returns -> "Hello World"
-greet1()
+greetWorld1()
 
 
 // parameters
-func greetName(name: String) -> String {
+func greetWorld2(name: String) -> String {
 	return "Hello \(name)"
 }
 // -> "Hello World"
-greetName(name: "World")
+greetWorld2(name: "World")
 
 
 // multiple parameters
-func greetName2(greet: String, name: String) {
+func greetWorld3(greet: String, name: String) {
 	print("\(greet) \(name)")
 }
-greetName2(greet: "Hello", name: "World")			// o: "Hello World"
+// -> "Hello World"
+greetWorld3(greet: "Hello", name: "World")
 
 
 // tuples
@@ -46,8 +47,8 @@ greetName3(greet: "Hello", ID: (name:"Matt", age:5))
 func thisFuncReturnsATuple() -> (a: Int, b: Int, c: Int) {
 	return (1,2,3)
 }
-var alpha = thisFuncReturnsATuple()             // o: (1, 2, 3)
-print(alpha.a)                                  // o: 1
+var alpha = thisFuncReturnsATuple()             // -> (1, 2, 3)
+print(alpha.a)                                  // -> 1
 
 
 // multiple returns - bigger example
@@ -73,7 +74,7 @@ func returnsTupleOpt() -> (a: Int, b: Int)? {
 	return (1, 2)
 }
 if let alpha2 = returnsTupleOpt() {						// must bind to see
-	print(alpha2)																// o: 1, 2
+	print(alpha2)																// -> 1, 2
 }
 
 
@@ -83,7 +84,7 @@ func returnSingTuple() -> (a: Int?, b: Int) {
 	return (a: nil,b: 2)
 }
 var alpha3 = returnSingTuple()								// no bind needed
-print(alpha3.0 ?? 7)                          // o: optional 1
+print(alpha3.0 ?? 7)                          // -> optional 1
 
 
 // passing an optional argument
@@ -174,7 +175,7 @@ func doStuff(_ a: String) -> String {
 
 var stuff: (String) -> String = doStuff
 
-stuff("What?")                                   // o: Hi
+stuff("What?")                                   // -> Hi
 
 
 // functions typed as parameters
@@ -195,8 +196,8 @@ func printMathResult(_ mathFunction: (Int, Int) -> Int,
 	print("Result: \(mathFunction(a, b))")
 }
 
-printMathResult(addTwoInts, 3, 5)											// o: 8
-printMathResult(multiplyTwoInts, 3, 5)								// o: 15
+printMathResult(addTwoInts, 3, 5)											// -> 8
+printMathResult(multiplyTwoInts, 3, 5)								// -> 15
 
 
 // functions as return types (apple doc example)
@@ -215,7 +216,7 @@ var currentValue = -7
 // determines whether to use stepForward/Backward
 let moveToZero = chooseStepFunction(backward: currentValue > 0)
 
-print("Counting to zero:")
+print("Counting to zer->")
 while currentValue != 0 {
 	print("\(currentValue)... ")
 	currentValue = moveToZero(currentValue)
@@ -240,7 +241,7 @@ var currentValue2 = 4
 // determines whether to use stepForward/Backward
 let moveToZero2 = chooseStepFunction(backward: currentValue2 > 0)
 
-print("Counting to zero:")
+print("Counting to zer->")
 while currentValue2 != 0 {
 	print("\(currentValue2)... ")
 	currentValue2 = moveToZero2(currentValue2)
@@ -264,8 +265,8 @@ func bankVault(passcode: String) -> String {
 		return closeBankVault()
 	}}
 
-bankVault(passcode: "wrongsecret")               // o: closed
-bankVault(passcode: "secret")                    // o: open
+bankVault(passcode: "wrongsecret")               // -> closed
+bankVault(passcode: "secret")                    // -> open
 
 // openBankVault()															// error - not in scope
 
@@ -286,9 +287,9 @@ class SquareIt {
    }}
 
 var squareIt = SquareIt()
-squareIt.math(4)           // o: 16
-squareIt.math(4.5)         // o: 20.25
-squareIt.math("hello")     // o: numbers please
+squareIt.math(4)           // -> 16
+squareIt.math(4.5)         // -> 20.25
+squareIt.math("hello")     // -> numbers please
 
 
 // recursion
@@ -493,28 +494,28 @@ let sortedR6 = randInts.sorted(by: <)
 // CLOSURES - BUILT-IN
 // Filter - returns array elements that pass a certain condition
 // --------------------------------------------------------------------------
-var filteredInts = randInts.filter{$0 % 2 == 0}			// o: 2, 4
+var filteredInts = randInts.filter{$0 % 2 == 0}			// -> 2, 4
 filteredInts
 
 
 // map - returns array elements transformed by a function
 // --------------------------------------------------------------------------
 var mapDouble = randInts.map{$0 * 2}
-mapDouble                                           // o: 4, 2, 8, 6
+mapDouble                                           // -> 4, 2, 8, 6
 
 // map - with string interpolation
 var mapMoney = randInts.map{"\($0)€"}
-mapMoney                                            // o: 2€, 1€
+mapMoney                                            // -> 2€, 1€
 
 // mapValues
 let peopleMetric = ["Taylor": 178.0, "Justin": 175.0, "Ed": 173.0]
 let peopleImperial = peopleMetric.mapValues { $0 / 2.54 }
-peopleImperial                     // o: ed, 68; taylor, 70; justin 69
+peopleImperial                     // -> ed, 68; taylor, 70; justin 69
 
 // compactMap - remove nil values
 let numbers = ["1", "2", "Fish"]
 let integers = numbers.compactMap { Int($0) }
-integers                                            // o: 1, 2
+integers                                            // -> 1, 2
 
 
 // Max & Min - return the highest/lowest value from a list
@@ -522,36 +523,36 @@ integers                                            // o: 1, 2
 let fruit = "watermelon"
 
 let maxValue = max("orange", "pine", "apple", fruit)
-maxValue																				    // o: watermelon
+maxValue																				    // -> watermelon
 
 let minValue = min(3.3, 1.1, 2.2, 5.7)
-minValue																				    // o: 1.1
+minValue																				    // -> 1.1
 
 // find the max between 3 numbers
 let first = 10, second = 15, third = 18
-let largest = max(max(first, second), third)        // o: 18
+let largest = max(max(first, second), third)        // -> 18
 
 
 // Reduce - return the sum of array elements
 // --------------------------------------------------------------------------
 var reducedArray = randInts.reduce(0, +)
-reducedArray																	      // o: 10
+reducedArray																	      // -> 10
 
 
 // Reverse - reverses an array
 // --------------------------------------------------------------------------
-randInts.reverse()													// o: in-line change
+randInts.reverse()													// -> in-line change
 
 
 // Sort - in-line sort of values w/in the array
 // --------------------------------------------------------------------------
-randInts.sort(by: <)													// o: 1, 2, 3, 4
+randInts.sort(by: <)													// -> 1, 2, 3, 4
 
 
 // Sorted - returns a sorted array
 // --------------------------------------------------------------------------
 let sortedInts = randInts.sorted(by: >)
-sortedInts																		// o: 4, 3, 2, 1
+sortedInts																		// -> 4, 3, 2, 1
 
 
 
