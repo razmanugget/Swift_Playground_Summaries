@@ -81,12 +81,12 @@ if let alpha2 = returnsTupleOpt() {
 
 
 // this tuple return contains an optional
-// ----------------------------------------------------------------------------
 func returnSingTuple() -> (a: Int?, b: Int) {
 	return (a: nil,b: 2)
 }
-var alpha3 = returnSingTuple()								// no bind needed
-print(alpha3.0 ?? 7)                          // -> optional 1
+// no bind needed -> optional 1
+var alpha3 = returnSingTuple()
+print(alpha3.0 ?? 7)
 
 
 // passing an optional argument
