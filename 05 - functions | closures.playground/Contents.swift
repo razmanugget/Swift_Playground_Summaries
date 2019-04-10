@@ -47,8 +47,10 @@ greetName0(greet: "Hello", ID: (name:"Matt", age:5))
 func thisFuncReturnsATuple() -> (a: Int, b: Int, c: Int) {
 	return (1,2,3)
 }
-var alpha = thisFuncReturnsATuple()             // -> (1, 2, 3)
-print(alpha.a)                                  // -> 1
+// = (1, 2, 3)
+var alpha = thisFuncReturnsATuple()
+// -> 1
+print(alpha.a)
 
 
 // multiple returns - bigger example
