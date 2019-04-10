@@ -71,12 +71,12 @@ print("evens: \(sortedNumbs.evens) odds: \(sortedNumbs.odds)")
 
 
 // this entire tuple return is an optional
-// ----------------------------------------------------------------------------
 func returnsTupleOpt() -> (a: Int, b: Int)? {
 	return (1, 2)
 }
-if let alpha2 = returnsTupleOpt() {						// must bind to see
-	print(alpha2)																// -> 1, 2
+// must bind to see -> 1, 2
+if let alpha2 = returnsTupleOpt() {
+	print(alpha2)
 }
 
 
