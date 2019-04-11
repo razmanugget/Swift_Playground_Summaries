@@ -90,12 +90,12 @@ print(alpha3.0 ?? 7)
 
 
 // passing an optional argument
-// ----------------------------------------------------------------------------
 func grabMidName(name: (String, String?, String)) -> String? {
 	return name.1
 }
+// if nil, then nothing
 if let middleName = grabMidName(name: ("Mork", nil, "Ork")) {
-	print(middleName)												// if nil, then nothing
+	print(middleName)
 }
 
 
