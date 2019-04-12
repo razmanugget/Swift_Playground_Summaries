@@ -15,7 +15,7 @@ greetWorld0()
 func greetWorld1() -> String {
 	return "Hello World"
 }
-// returns -> "Hello World"
+// returns -> Hello World
 greetWorld1()
 
 
@@ -23,7 +23,7 @@ greetWorld1()
 func greetWorld2(name: String) -> String {
 	return "Hello \(name)"
 }
-// -> "Hello World"
+// -> Hello World
 greetWorld2(name: "World")
 
 
@@ -31,7 +31,7 @@ greetWorld2(name: "World")
 func greetWorld3(greet: String, name: String) {
 	print("\(greet) \(name)")
 }
-// -> "Hello World"
+// -> Hello World
 greetWorld3(greet: "Hello", name: "World")
 
 
@@ -65,8 +65,9 @@ func sortEvenOdd(numbs: [Int]) -> (evens: [Int], odds: [Int]) {
 		}}
 	return (evens, odds)
 }
-let aBunchOfNumbs = [10,1,4,3,57,43,84,27,156,111]
+let aBunchOfNumbs = [10,1,4,3,57,43,84,27,156]
 let sortedNumbs = sortEvenOdd(numbs: aBunchOfNumbs)
+// -> evens [10, 4, 84, 156] odds [1, 3, 57, 43, 27]
 print("evens: \(sortedNumbs.evens) odds: \(sortedNumbs.odds)")
 
 
