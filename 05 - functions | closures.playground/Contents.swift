@@ -67,6 +67,7 @@ func sortEvenOdd(numbs: [Int]) -> (evens: [Int], odds: [Int]) {
 }
 let aBunchOfNumbs = [10,1,4,3,57,43,84,27,156]
 let sortedNumbs = sortEvenOdd(numbs: aBunchOfNumbs)
+
 // -> evens [10, 4, 84, 156] odds [1, 3, 57, 43, 27]
 print("evens: \(sortedNumbs.evens) odds: \(sortedNumbs.odds)")
 
@@ -101,7 +102,6 @@ if let middleName = grabMidName(name: ("Mork", nil, "Ork")) {
 
 
 // ignored parameters (_)
-// ----------------------------------------------------------------------------
 func greetIgnore(greet: String, _: String) {
 	print("\(greet)")
 }
