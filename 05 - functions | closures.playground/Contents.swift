@@ -110,10 +110,11 @@ greetIgnore(greet: "Here comes...", "Nothing")
 
 
 // renaming parameters
-func calcArea(argHeight height: Int, argWidth width: Int) -> Int {
+func calcArea(argH height: Int, argW width: Int) -> Int {
 	return height * width
 }
-print("Area = \(calcArea(argHeight: 10, argWidth: 12))")
+// -> Area = 120
+print("Area = \(calcArea(argH: 10, argW: 12))")
 
 
 // default parameter values  (=)
