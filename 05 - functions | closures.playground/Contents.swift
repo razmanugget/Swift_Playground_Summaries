@@ -105,11 +105,11 @@ if let middleName = grabMidName(name: ("Mork", nil, "Ork")) {
 func greetIgnore(greet: String, _: String) {
 	print("\(greet)")
 }
-greetIgnore(greet: "Hello", "Ghost")
+// -> Here comes...
+greetIgnore(greet: "Here comes...", "Nothing")
 
 
 // renaming parameters
-// ----------------------------------------------------------------------------
 func calcArea(argHeight height: Int, argWidth width: Int) -> Int {
 	return height * width
 }
