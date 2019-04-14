@@ -118,13 +118,15 @@ print("Area = \(calcArea(argH: 10, argW: 12))")
 
 
 // default parameter values  (=)
-// ----------------------------------------------------------------------------
 func add(a: Int = 10, b: Int = 50) -> Int {
 	return (a + b)
 }
-add()																// 10 + 50
-add(b:200)													// 10 + 200
-add(a:99, b:200)										// 99 + 200
+// -> 60
+add()
+// -> 210
+add(b:200)
+// -> 299
+add(a:99, b:200)
 
 
 // variadic parameter
