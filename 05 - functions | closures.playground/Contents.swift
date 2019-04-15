@@ -130,7 +130,6 @@ add(a:99, b:200)
 
 
 // variadic parameter
-// ----------------------------------------------------------------------------
 func addMany(numbers: Int...) -> Int {
 	var total = 0
 	for number in numbers {
@@ -138,12 +137,13 @@ func addMany(numbers: Int...) -> Int {
 	}
 	return total
 }
-addMany(numbers: 1,2)															// r: 3
-addMany(numbers: 1,2,3,4,5,6,7)										// r: 28
+// -> 3
+addMany(numbers: 1,2)
+// -> 28
+addMany(numbers: 1,2,3,4,5,6,7)
 
 
 // overloading functions to accept variadic and array
-// ----------------------------------------------------------------------------
 func average(numbers: [Int]) -> Int {
 	var total = 0
 	for n in numbers {
@@ -162,7 +162,6 @@ var arrayAdd = average(numbers: [4,6,8,11])				// array of #'s
 
 
 // inout parameters variables are passed by reference
-// ----------------------------------------------------------------------------
 func ageUpdate(age: inout Int) {							// no return needed
 	age = age + 1
 }
@@ -173,8 +172,9 @@ ageUpdate(age: &age)													// r: age is now 8
 
 
 // ADVANCED FUNCTIONS
-// variables typed as parameters
 // ----------------------------------------------------------------------------
+
+// variables typed as parameters
 func doStuff(_ a: String) -> String {
 	return "Hi"
 }
@@ -185,7 +185,6 @@ stuff("What?")                                   // -> Hi
 
 
 // functions typed as parameters
-// ----------------------------------------------------------------------------
 func addTwoInts(_ a: Int, _ b: Int) -> Int {
 	return a + b
 }
