@@ -201,12 +201,13 @@ func printMathResult(_ mathFunction: (Int, Int) -> Int,
 	print("Result: \(mathFunction(a, b))")
 }
 
-printMathResult(addTwoInts, 3, 5)											// -> 8
-printMathResult(multiplyTwoInts, 3, 5)								// -> 15
+// -> 8
+printMathResult(addTwoInts, 3, 5)
+// -> 15
+printMathResult(multiplyTwoInts, 3, 5)
 
 
 // functions as return types (apple doc example)
-// ----------------------------------------------------------------------------
 func stepForward(_ input: Int) -> Int {
 	return input + 1
 }
@@ -230,7 +231,6 @@ print("zero!")
 
 
 // nested functions (refactored apple example)
-// ----------------------------------------------------------------------------
 func chooseStepFunction2(backward: Bool) -> ((Int) -> Int) {
 	func stepForward(_ input: Int) -> Int {
 		return input + 1
@@ -255,7 +255,6 @@ print("zero!")
 
 
 // nested functions (other example)
-// ----------------------------------------------------------------------------
 func bankVault(passcode: String) -> String {
 	func openBankVault() -> String {
 		return "Vault opened"
@@ -276,65 +275,63 @@ bankVault(passcode: "secret")                    // -> open
 // openBankVault()															// error - not in scope
 
 
-/*
 
 // function overloading
 // ----------------------------------------------------------------------------
-class SquareIt {
-   func math(num:Int) -> Int {
-      return num * num
-   }
-   func math(num:Double) -> Double {
-      return num * num
-   }
-   func math(num:String) -> String {
-      return ("numbers please")
-   }}
-
-var squareIt = SquareIt()
-squareIt.math(4)           // -> 16
-squareIt.math(4.5)         // -> 20.25
-squareIt.math("hello")     // -> numbers please
-
-
-// recursion
-// ----------------------------------------------------------------------------
-func countDownFrom (ix:Int) {
-   print (ix)
-   if ix > 0 {
-      countDownFrom(ix-1)
-   }}
-
-countDownFrom(15)
-
-
-// function used as a value
-// ----------------------------------------------------------------------------
-func doThis(f:()->()) {                // signature must match
-   f()                                 // passed in function
-}
-
-func whatToDo() {                      // signature ()->()
-   print("I did it")
-}
-
-doThis(whatToDo)
-
-
-// function used as a value (cleaned up with typealias)
-// ----------------------------------------------------------------------------
-typealias cleanFunc = () -> ()
-
-func doThis2(f: cleanFunc) {
-   f()
-}
-
-func whatToDo2() {
-   print("I did it")
-}
-
-doThis(whatToDo2)
-*/
+//class SquareIt {
+//   func math(num:Int) -> Int {
+//      return num * num
+//   }
+//   func math(num:Double) -> Double {
+//      return num * num
+//   }
+//   func math(num:String) -> String {
+//      return ("numbers please")
+//   }}
+//
+//var squareIt = SquareIt()
+//squareIt.math(4)           // -> 16
+//squareIt.math(4.5)         // -> 20.25
+//squareIt.math("hello")     // -> numbers please
+//
+//
+//// recursion
+//// ----------------------------------------------------------------------------
+//func countDownFrom (ix:Int) {
+//   print (ix)
+//   if ix > 0 {
+//      countDownFrom(ix-1)
+//   }}
+//
+//countDownFrom(15)
+//
+//
+//// function used as a value
+//// ----------------------------------------------------------------------------
+//func doThis(f:()->()) {                // signature must match
+//   f()                                 // passed in function
+//}
+//
+//func whatToDo() {                      // signature ()->()
+//   print("I did it")
+//}
+//
+//doThis(whatToDo)
+//
+//
+//// function used as a value (cleaned up with typealias)
+//// ----------------------------------------------------------------------------
+//typealias cleanFunc = () -> ()
+//
+//func doThis2(f: cleanFunc) {
+//   f()
+//}
+//
+//func whatToDo2() {
+//   print("I did it")
+//}
+//
+//doThis(whatToDo2)
 
 
 
