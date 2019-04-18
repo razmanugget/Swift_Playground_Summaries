@@ -360,7 +360,6 @@ perform5Times(myClosureParam: { ()->() in
 
 
 // reducing a closure to its simplest terms
-// ----------------------------------------------------------------------------
 func doMath(a:Int, b:Int, calc:(_ x:Int, _ y:Int) -> Int) -> Int {
 	return calc(a, b)
 }
@@ -374,7 +373,6 @@ doMath(a: 10, b:10, calc:{$0 * $1})
 
 
 // closure counter - within a nested function
-// ----------------------------------------------------------------------------
 func makeIncrementer(forIncrement amount: Int) -> () -> Int {
 	var runningTotal = 0
 	func incrementer() -> Int {
