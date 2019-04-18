@@ -498,7 +498,6 @@ filteredInts
 
 
 // map - returns array elements transformed by a function
-// --------------------------------------------------------------------------
 var mapDouble = randInts.map{$0 * 2}
 mapDouble                                           // -> 4, 2, 8, 6
 
