@@ -392,7 +392,6 @@ incrementByTen()										// r: 20 (knows to keep separate)
 
 
 // closure counter - separate (@escaping)
-// ----------------------------------------------------------------------------
 func countAdder(ca:@escaping ()->()) -> () -> () {
 	var ct = 0
 	return {
@@ -461,8 +460,9 @@ serve(customer: { customersInLine.remove(at: 0) } )
 
 
 // CLOSURES - BREAKDOWN
-// Sorted - returns a sorted array
 // --------------------------------------------------------------------------
+
+// Sorted - returns a sorted array
 var randInts = [2, 1, 4, 3]
 
 // sorted - written out as a function
@@ -473,7 +473,6 @@ var sortedR1 = randInts.sorted(by: compareTwo)
 
 
 // Sorted - as a closure (full)
-// --------------------------------------------------------------------------
 let sortedR2 = randInts.sorted(by: {(n1:Int, n2:Int) -> Bool in return n1 < n2})
 
 // sorted - closure inferring type from context
