@@ -31,8 +31,9 @@ print(struct1.varX)						// o: 1  (Value)
 
 
 // PROPERTIES
-// properties - stored
 // ----------------------------------------------------------------------------
+
+// properties - stored
 struct SYard {								// name: UpperCamelCase
 	var length: Int
 	var height: Int = 10				// still use an argument when instantiating
@@ -45,11 +46,11 @@ class CYard {									// name: UpperCamelCase
 }															//   as a variable
 
 var newSYard = SYard(length: 20, height: 20)
-let newCYard = CYard()				// need initializers to change values
+// need initializers to change values
+let newCYard = CYard()
 
 
 // properties - lazy
-// ----------------------------------------------------------------------------
 class BonusCompute {
 lazy var bonus = randomBonus()
   
