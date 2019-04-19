@@ -13,7 +13,8 @@ struct S {
 }
 
 // instances created, both struct|class = 1
-let class1 = C()				  // a constant, but underlying var can change
+let class1 = C()
+// a constant, but underlying var can change
 var struct1 = S()
 
 // new instances created from copies
@@ -21,8 +22,10 @@ var class2 = class1
 var struct2 = struct1
 
 // new assignment of a variable
-class2.varX = 2								// affects all instances of the class
-struct2.varX = 2							// treated independently
+// affects all instances of the class
+class2.varX = 2
+// treated independently
+struct2.varX = 2
 
 // this is where they differ
 print(class1.varX)						// o: 2  (Reference)
