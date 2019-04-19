@@ -61,17 +61,18 @@ lazy var bonus = randomBonus()
     return Int(arc4random())
   }
 }
-
-var newBonus = BonusCompute()								// shows bonus as 'nil'
-print(newBonus.bonus)												// now bonus is computed
+// shows bonus as 'nil'
+var newBonus = BonusCompute()
+// now bonus is computed
+print(newBonus.bonus)
 
 
 // properties - computed
-// ----------------------------------------------------------------------------
 struct SideCompute {
 	var side: Double
-	
-	var area: Double {												// computed property
+   
+	// computed property
+	var area: Double {
 		get {
 			return side * side
 		}
@@ -79,11 +80,15 @@ struct SideCompute {
 			side = sqrt(newValue)
 		}}}
 
-var newSquare = SideCompute(side: 12)				// setter wasn't accessed
-newSquare.area															// o: 144
+// setter wasn't accessed
+var newSquare = SideCompute(side: 12)
+// o: 144
+newSquare.area
 
-newSquare.area = 9													// setter is accessed
-newSquare.side															// o: 3
+// setter is accessed
+newSquare.area = 9
+// o: 3
+newSquare.side
 
 
 // properties - computed (no setter)
