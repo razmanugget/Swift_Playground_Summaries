@@ -517,7 +517,6 @@ integers                                            // -> 1, 2
 
 
 // Max & Min - return the highest/lowest value from a list
-// --------------------------------------------------------------------------
 let fruit = "watermelon"
 
 let maxValue = max("orange", "pine", "apple", fruit)
@@ -532,26 +531,19 @@ let largest = max(max(first, second), third)        // -> 18
 
 
 // Reduce - return the sum of array elements
-// --------------------------------------------------------------------------
 var reducedArray = randInts.reduce(0, +)
 reducedArray																	      // -> 10
 
 
 // Reverse - reverses an array
-// --------------------------------------------------------------------------
 randInts.reverse()													// -> in-line change
 
 
 // Sort - in-line sort of values w/in the array
-// --------------------------------------------------------------------------
 randInts.sort(by: <)													// -> 1, 2, 3, 4
 
 
 // Sorted - returns a sorted array
-// --------------------------------------------------------------------------
 let sortedInts = randInts.sorted(by: >)
 sortedInts																		// -> 4, 3, 2, 1
-
-
-
 
