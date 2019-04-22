@@ -391,7 +391,6 @@ let dog2 = susie.dog?.name          					// o: optional "Spot"
 
 
 // optional chaining with subscripts
-// ----------------------------------------------------------------------------
 class Site {
    var title: String
    var libraries: [Library]?
@@ -413,7 +412,6 @@ class Document {
 }
 
 // creating the doc libary instance and linking to site
-// ----------------------------------------------------------------------------
 let acctSite = Site(title: "Accounting")
 let auditLibrary = Library(title: "Audit Library")
 acctSite.libraries = []
