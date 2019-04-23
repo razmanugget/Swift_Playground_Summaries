@@ -491,8 +491,9 @@ let sortedR6 = randInts.sorted(by: <)
 
 
 // CLOSURES - BUILT-IN
-// Filter - returns array elements that pass a certain condition
 // --------------------------------------------------------------------------
+
+// Filter - returns array elements that pass a certain condition
 var filteredInts = randInts.filter{$0 % 2 == 0}			// -> 2, 4
 filteredInts
 
