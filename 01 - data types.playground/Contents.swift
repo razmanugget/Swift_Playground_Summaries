@@ -269,21 +269,22 @@ print("The song is \(name) and it's \(length ?? 90) seconds long")
 // initialization (?)
 var errorCodeStrg: String?
 
-// access by including a default value to prevent nil
-print(errorCodeStrg ?? "default value")     // r: "default value"
+// access by including a default value to prevent nil -> default value
+print(errorCodeStrg ?? "default value")
 
 
 // auto created optional
 let possibleError = "123"
 let convertedError = Int(possibleError)
 
-print(convertedError!)											// r: 123 (not optional)
+// -> 123 (not optional)
+print(convertedError!)
 
 
 // forced unwrapping (!) when you know a value is present
-// ----------------------------------------------------------------------------
 errorCodeStrg = "404"
-print(errorCodeStrg!)												// r: forced unwrap = "404"
+// -> forced unwrap = "404"
+print(errorCodeStrg!)
 
 // forced unwrapping (!) with checking for nil
 if errorCodeStrg != nil {
