@@ -309,7 +309,6 @@ print(errorCodeStrg ?? "optional error")						// r: "opt error"
 
 
 // implicitly unwrapped optionals (declared w/ !, unwrapped normally)
-// ----------------------------------------------------------------------------
 var assumedInt: Int!
 assumedInt = 44
 print(assumedInt)													// r: 44 (not optional)
@@ -326,14 +325,12 @@ if let boundInt = implicitInt {						// binding to non-optional
 
 // Apple Doc example
 // forced unwrapping (declared w/ ?, unwrapped w/ !)
-// ----------------------------------------------------------------------------
 var possibleString:String? = "An optional string."
 
 var forcedString = possibleString!           // requires ! mark
 
 
 // implicitly unwrapped optionals (declared w/ !, unwrapped normally)
-// ----------------------------------------------------------------------------
 var assumedString:String! = "An implicitly unwrapped optional string."
 
 let implicitString = assumedString           // no need for ! mark
@@ -357,8 +354,10 @@ print(implicitString ?? "default value here")
 
 // optional chaining
 // ----------------------------------------------------------------------------
-var maybeString: String? = "Hello Swift"      // regular optional
-let uppercase = maybeString?.uppercased() 		// ? - signals opt chain
+// regular optional
+var maybeString: String? = "Hello Swift"
+// ? - signals opt chain
+let uppercase = maybeString?.uppercased()
 
 print(maybeString ?? "maybeString is an optional")
 print(uppercase ?? "uppercase is still an optional")
@@ -375,7 +374,6 @@ let nextlevel = uppercase2 ?? "nextlevel here"
 print(nextlevel)
 
 // optional chaining class example
-// ----------------------------------------------------------------------------
 class Person {
    var dog: Dog?
 }
