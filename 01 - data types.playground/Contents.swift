@@ -299,7 +299,6 @@ if let errorCodeStrg = errorCodeStrg, possibleError == "123" {
 
 
 // optional binding (while)
-// ----------------------------------------------------------------------------
 while isApple == true {
    print(errorCodeStrg!)															// r: optional 404
    errorCodeStrg = nil
