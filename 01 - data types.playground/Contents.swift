@@ -286,16 +286,15 @@ errorCodeStrg = "404"
 // -> forced unwrap = "404"
 print(errorCodeStrg!)
 
-// forced unwrapping (!) with checking for nil
+// forced unwrapping (!) with checking for nil -> forced unwrap r: "404"
 if errorCodeStrg != nil {
-   print(errorCodeStrg!)											// forced unwrap r: "404"
+   print(errorCodeStrg!)
 }
 
 
-// optional binding (if let ,)
-// ----------------------------------------------------------------------------
+// optional binding (if let ,) -> 404
 if let errorCodeStrg = errorCodeStrg, possibleError == "123" {
-   print(errorCodeStrg)															// r: 404
+   print(errorCodeStrg)
 }
 
 
