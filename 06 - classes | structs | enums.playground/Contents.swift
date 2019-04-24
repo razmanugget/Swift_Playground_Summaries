@@ -2,8 +2,9 @@ import UIKit
 
 
 // CLASSES & STRUCTS
-// pass by reference vs value
 // ----------------------------------------------------------------------------
+
+// pass by reference vs value
 // declared
 class C {
 	var varX = 1
@@ -82,12 +83,12 @@ struct SideCompute {
 
 // setter wasn't accessed
 var newSquare = SideCompute(side: 12)
-// o: 144
+// -> 144
 newSquare.area
 
 // setter is accessed
 newSquare.area = 9
-// o: 3
+// o-> 3
 newSquare.side
 
 
