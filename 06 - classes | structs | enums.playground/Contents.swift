@@ -93,7 +93,7 @@ newSquare.side
 
 
 // properties - computed (no setter)
-// ----------------------------------------------------------------------------
+
 struct SquareArea {
 	var side: Int
 	
@@ -103,7 +103,8 @@ struct SquareArea {
 	}}
 
 var newSquare2 = SquareArea(side: 5)
-newSquare2.area															// o: 25
+// -> 25
+newSquare2.area
 
 
 // property observers
