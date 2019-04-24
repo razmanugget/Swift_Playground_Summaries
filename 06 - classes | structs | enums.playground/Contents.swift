@@ -93,7 +93,6 @@ newSquare.side
 
 
 // properties - computed (no setter)
-
 struct SquareArea {
 	var side: Int
 	
@@ -108,7 +107,6 @@ newSquare2.area
 
 
 // property observers
-// ----------------------------------------------------------------------------
 class ObserveName {
 	var name:String = "John Doe" {
 		willSet (newValue) {							// rename newValue if needed
@@ -119,7 +117,8 @@ class ObserveName {
 		}}}
 
 var newName = ObserveName()
-newName.name = "Jane Doe"							// console shows observer actions
+// console shows observer actions
+newName.name = "Jane Doe"
 
 
 // key-value observing (KVO)
