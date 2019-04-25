@@ -158,8 +158,9 @@ SomeClass.storedTypeProp
 
 
 // METHODS
-// instance methods
 // ----------------------------------------------------------------------------
+
+// instance methods
 class Counter {
 	var count = 0
 	func increment() {count += 1}
@@ -174,7 +175,6 @@ counter.reset()																// o: 0
 
 
 // modifying value types within methods (mutating func)
-// ----------------------------------------------------------------------------
 struct Mutation {
 	var number = 7							// can't change w/o mutating
 	
@@ -184,8 +184,10 @@ struct Mutation {
 }
 var myMutate = Mutation()
 
-myMutate.multiplyBy(value: 5)							// can use func directly
-myMutate.number														// o: 35
+// can use func directly
+myMutate.multiplyBy(value: 5)
+// -> 35
+myMutate.number
 
 
 // non-mutating example of above
