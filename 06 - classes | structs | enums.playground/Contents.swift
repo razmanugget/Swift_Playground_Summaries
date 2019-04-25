@@ -135,7 +135,6 @@ taylor.name = "Justin"
 
 
 // type properties (static)
-// ----------------------------------------------------------------------------
 struct SomeStructure {
 	static var storedTypeProp = "Some value."
 	static var computedTypeProp: Int {return 1}
@@ -151,9 +150,10 @@ class SomeClass {
 	static var computedTypeProp: Int {return 7}
 	class var overrideableComputedTypeProp: Int {return 9}
 }
-
-SomeStructure.computedTypeProp								// o: 1
-SomeClass.storedTypeProp											// o: Some value.
+// -> 1
+SomeStructure.computedTypeProp
+// -> Some value.
+SomeClass.storedTypeProp
 
 
 
