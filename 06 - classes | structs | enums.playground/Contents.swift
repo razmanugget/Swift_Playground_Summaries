@@ -122,17 +122,16 @@ newName.name = "Jane Doe"
 
 
 // key-value observing (KVO)
-// ----------------------------------------------------------------------------
 @objc class ObservePerson: NSObject {
-  @objc dynamic var name = "Taylor Swift"
+  @objc dynamic var name = "Taylor"
 }
 let taylor = ObservePerson()
 
 taylor.observe(\ObservePerson.name, options: .new) { person, change in
   print("I'm now called \(person.name)")
 }
-
-taylor.name = "Justin Bieber"         //o: I'm now called Justin B
+// -> I'm now called Justin
+taylor.name = "Justin"         
 
 
 // type properties (static)
