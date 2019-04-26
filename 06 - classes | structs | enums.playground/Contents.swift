@@ -191,7 +191,6 @@ myMutate.number
 
 
 // non-mutating example of above
-// ----------------------------------------------------------------------------
 struct NoMutation {
 	func multiplyBy(value: Int) -> Int {
 		var number = 7
