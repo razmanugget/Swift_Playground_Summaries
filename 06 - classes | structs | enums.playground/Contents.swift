@@ -238,8 +238,9 @@ SomeClass2.overrideableTypeMethod()
 
 
 // SUBSCRIPTS
-// simple subscript with get/set
 // ----------------------------------------------------------------------------
+
+// simple subscript with get/set
 class Hand {
 	var fingers = ["thumb", "index", "middle", "ring", "pinky"]
 	subscript(i: Int) -> String {
@@ -249,7 +250,8 @@ class Hand {
 let hand = Hand()
 
 hand[4] = "pinkie"
-print(hand[2])																	// o: middle
+// -> middle
+print(hand[2])
 
 func nada(this: NSString , that: NSString ) -> Int {
   return (1)
