@@ -204,7 +204,6 @@ newValRec																	// o: 35
 
 
 // use self to modify/change a method property
-// ----------------------------------------------------------------------------
 enum OnOffSwitch {
 	case off, on
 	
@@ -216,12 +215,11 @@ enum OnOffSwitch {
 			self = .off
 		}}}
 var lightSwitch = OnOffSwitch.on
-
-lightSwitch.next()												// o: .off
+// -> .off
+lightSwitch.next()
 
 
 // type methods (static)
-// ----------------------------------------------------------------------------
 struct SomeStructure2 {
 	static func someTypeMethod() {print("type")}
 }
