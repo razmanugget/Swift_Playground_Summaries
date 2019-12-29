@@ -1,4 +1,4 @@
-import UIKit
+import Cocoa
 
 // ----------------------------------------------------------------------------
 
@@ -36,8 +36,7 @@ func nada(this: NSString , that: NSString ) -> Int {
 
 
 
-// BOOLS
-// ----------------------------------------------------------------------------
+// MARK: - BOOLS
 
 // declaration - create but don't initialize
 var isOrange: Bool
