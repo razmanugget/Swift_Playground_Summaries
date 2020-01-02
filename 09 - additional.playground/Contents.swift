@@ -2,6 +2,25 @@ import UIKit
 import GameplayKit
 
 
+// Self Usage
+class MyObject {
+   var count = 7           // instance
+   
+   func badMethod() {
+      var count = 42       // local var variable "hides" the instance var
+      print(count)         // -> 42
+   }
+   func betterMethod() {
+      var count = 42       // which one gets used
+      print(self.count)    // -> 7  (** self references the instance var**)
+   }
+   func bestMethod() {
+        var temp = count
+        print(temp)        // -> 7  (no ambiguity)
+     }
+}
+
+
 // Randomness
 // these don't require GameplayKit
 // ----------------------------------------------------------------------------
@@ -159,7 +178,7 @@ var myStringStack = Stack<String>()
 
 // protocol with associated type -----------------------------
 protocol Returnable {
-   typealias ItemType
+   associatedtype ItemType
    var any: ItemType? {get}
    var allObjects: [ItemType] {get}
 }
