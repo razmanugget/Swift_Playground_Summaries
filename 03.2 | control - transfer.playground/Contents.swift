@@ -56,6 +56,53 @@ default:
 }
 
 
+// MARK: - return
+
+// error handling
+func divide(_ a: Int, by b: Int) -> Int {
+   if b == 0 {
+      print("does not compute")
+      return 0
+   }
+   return a/b
+}
+
+// cleaner code
+func messyMethod() {
+   if x {
+      if y {
+         if z {
+            // statement XYZ
+         } else {
+            // statement Y
+         }
+      } else {
+         // statement X
+      }
+   } else {
+      // statement not XYZ
+   }
+}
+
+func cleanMethod() {
+   if !x {
+      // statement not X
+      return
+   }
+   
+   if !y {
+      // statement not Y
+      return
+   }
+   
+   if !z {
+      // statement not Z
+      return
+   }
+   // statement XYZ
+}
+
+
 // MARK: - labeled statments
 // -> x = 1-5, y = 1
 outerLoop: for x in 1...5 {
