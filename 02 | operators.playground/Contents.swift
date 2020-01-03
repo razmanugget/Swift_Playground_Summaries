@@ -1,13 +1,12 @@
-import UIKit
+import Cocoa
 
 
-// OPERATORS
-// ----------------------------------------------------------------------------
+// MARK: - Basic
 
 // assign a variable
 var a = 1
 // assign a constant
-let b = a							
+let b = a
 // assign multiple -> c = 4, d = 5.0
 let (c, d) = (4, 5.0)
 // assign a tuple -> e.0 = 6, e.1 = 7, e.2 = 8
@@ -57,8 +56,8 @@ roundNumber = trunc(testNumber)
 let doubleStr = String(format: "%.1f", testNumber)
 
 
-// comparison
-// ----------------------------------------------------------------------------
+
+// MARK: - Comparison
 let x = 100, y = 200
 
 // -> true
@@ -104,7 +103,7 @@ let website2 = personalSite ?? defaultSite
 
 // check Identity ===
 class C {
-   var varX = 1
+   var x = 1
 }
 
 let classOne = C()
@@ -124,8 +123,8 @@ if classOne === classThree {
 }
 
 
-// range & logical operators
-// ----------------------------------------------------------------------------
+
+// MARK: - Range | Logical
 
 // closed (...)
 for hello in 1...5 {
