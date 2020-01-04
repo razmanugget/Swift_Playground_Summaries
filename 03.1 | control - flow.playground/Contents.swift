@@ -31,9 +31,9 @@ for i: Character in "Swift" {
 }
 
 
-//  MARK: loop - for in case where
+//  MARK: loop - for in where
 // -> 3 6 9 12...
-for case let i in 1...50 where i % 3 == 0 {
+for i in 1...50 where i % 3 == 0 {
    print(i)
 }
 
@@ -105,7 +105,7 @@ default:
 }
 
 
-// switch with tuple matching
+// MARK: switch with tuple matching
 // -> That dog is 7
 let dogInfo1 = (7, "Fido")
 
@@ -121,7 +121,7 @@ default:
 }
 
 
-// switch with value bindings
+// MARK: switch with value bindings
 // -> My dog Maxx is 8
 let dogInfo2 = (7, "Max")
 
@@ -137,7 +137,7 @@ case var (age, name):
 }
 
 
-// value bindings & where clause
+// MARK: value bindings & where clause
 // -> Spot is 7
 let dogInfo3 = (7, "Spot")
 
@@ -151,7 +151,7 @@ default:
 }
 
 
-// if case & implied where stmt
+// MARK: if case & implied where stmt
 // -> Cool and...
 let age = 25
 

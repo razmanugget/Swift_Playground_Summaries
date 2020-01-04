@@ -23,7 +23,13 @@
       location = "group:03.3 | control - guard.playground">
    </FileRef>
    <FileRef
-      location = "group:04 - collection types.playground">
+      location = "group:04.1 | collections - arrays.playground">
+   </FileRef>
+   <FileRef
+      location = "group:04.2 | collections - dictionaries.playground">
+   </FileRef>
+   <FileRef
+      location = "group:04.3 | collections - sets.playground">
    </FileRef>
    <FileRef
       location = "group:05 - functions | closures.playground">
