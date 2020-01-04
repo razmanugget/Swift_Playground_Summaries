@@ -1,6 +1,14 @@
 import Cocoa
 
 
+// setup
+let x = false
+let y = false
+let z = false
+//let nameField.text = "test"
+//let addressField.text = "test"
+
+
 // MARK: - guard statment (loop)
 
 // in a loop -> 1, 2, 3, -4 isn't positive, 5
@@ -43,10 +51,45 @@ func greetLastName(name: (first: String, last: String?)) -> Int {
 greetLastName(name: ("Matt", nil))
 
 
+// MARK: - Avoids the Pyramid of Doom
+func messyMethod() {
+   if x {
+      if y {
+         if z {
+            // statement XYZ
+         } else {
+            // statement Y
+         }
+      } else {
+         // statement X
+      }
+   } else {
+      // statement not XYZ
+   }
+}
+
+func cleanMethod() {
+   guard x else {
+      // statement not X
+      return
+   }
+   
+   guard y else {
+      // statement not Y
+      return
+   }
+   
+   guard z else {
+      // statement not Z
+      return
+   }
+   // statement XYZ
+}
 
 
-// guard statment - place in a Project to avoid errors
-// ----------------------------------------------------------------------------
+
+// MARK: - Real World Usage
+// add to a project to avoid errors
 //func sendToServer(name: String, address: String) {
 //   print("sending stuff")
 //}
@@ -61,18 +104,4 @@ greetLastName(name: ("Matt", nil))
 //      return
 //   }
 //   sendToServer(name: name, address: address)
-//}
-//
-//// without guard statment - place in a Project to avoid errors
-//func nonguardSubmit() {
-//   // pyramid of doom starts here
-//   if let name = nameField.text {
-//      if let address = addressField.text {
-//         sendToServer(name: name, address: address)
-//      } else {
-//         print("no address to submit")
-//      }
-//   } else {
-//      print("no name to submit")
-//   }
 //}

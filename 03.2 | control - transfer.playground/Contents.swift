@@ -1,5 +1,10 @@
 import Cocoa
 
+// setup
+let x = false
+let y = false
+let z = false
+
 
 // MARK: - Control Transfer Statements
 
@@ -104,12 +109,12 @@ func cleanMethod() {
 
 
 // MARK: - labeled statments
-// -> x = 1-5, y = 1
-outerLoop: for x in 1...5 {
-   innerLoop: for y in 1...3 {
-      if y == 2 {
+// -> i = 1-5, j = 1
+outerLoop: for i in 1...5 {
+   innerLoop: for j in 1...3 {
+      if j == 2 {
          continue outerLoop
       }
-      print("x = \(x), y = \(y)")
+      print("i = \(i), j = \(j)")
    }
 }
