@@ -1,7 +1,7 @@
 import Cocoa
 
 
-// MARK: - for / in loops
+// MARK: - For / In Loops
 
 // basic -> prints #'s
 for i in 1...10 {
@@ -31,21 +31,21 @@ for i: Character in "Swift" {
 }
 
 
-// loop - for in case where
+//  MARK: loop - for in case where
 // -> 3 6 9 12...
 for case let i in 1...50 where i % 3 == 0 {
    print(i)
 }
 
 
-// loop - for in stride
+//  MARK: loop - for in stride
 // -> 11 9 7...
 for count in stride(from: 11, to: 1, by: -2) {
    print("\(count)")
 }
 
 
-// loop - for in reversed
+//  MARK: loop - for in reversed
 // -> 5 4 3...
 for reversedCount in (1...5).reversed() {
    print("\(reversedCount)")
@@ -53,7 +53,7 @@ for reversedCount in (1...5).reversed() {
 
 
 
-// MARK: - while loop
+// MARK: - While Loop
 
 // -> 1 2 3 (i = 4 at end)
 var i = 1
@@ -63,7 +63,7 @@ while i <= 3 {
 }
 
 
-// loop repeat while
+//  MARK: loop repeat while
 // -> 1 2 3 (j = 4 at end)
 var j = 1
 repeat {
@@ -72,7 +72,7 @@ repeat {
 } while j <= 3
 
 
-// MARK: - if / else statement
+// MARK: - If / Else Statement
 // -> This is true
 if (1 < 3) {
    print("This is true")
@@ -84,7 +84,7 @@ if (1 < 3) {
 
 
 
-// MARK: - SWITCH
+// MARK: - Switch Statement
 
 // basic switch statement
 var statusCode = 404
