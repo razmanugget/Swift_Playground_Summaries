@@ -34,6 +34,11 @@ if let errorCodeStrg = errorCodeStrg, possibleError == "123" {
    print(errorCodeStrg)
 }
 
+// forced upwrapping with error handling  (*** clean this up ****)
+// known as short circuiting -> 2nd condition isn't evaluated unless the first is true
+//if location == nil || location!.horizontalAccuracy > newLocation.horizontalAccuracy {
+//}
+
 
 // optional binding (while)
 //while isApple == true {

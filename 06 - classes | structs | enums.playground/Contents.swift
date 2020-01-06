@@ -18,6 +18,19 @@ let class1 = C()
 // a constant, but underlying var can change
 var struct1 = S()
 
+enum ColorName: String, CaseIterable {
+   case black = "black"
+   case silver = "silver"
+   case gray = "gray"
+   case white = "white"
+   case maroon = "maroon"
+   case red = "red"
+}
+
+for color in ColorName.allCases {
+   print("I love the color \(color).")
+}
+
 // new instances created from copies
 var class2 = class1
 var struct2 = struct1
