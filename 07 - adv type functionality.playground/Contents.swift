@@ -116,6 +116,13 @@ var d2 = Double(s1)  // r: 9.99 but if string, then (nil)
 let actuallyDouble = 3 as Double
 // -------------------------------------------------
 
+// real world usage
+let controller = segue.destination as! ItemDetailViewController
+controller.delegate = self
+// the navigation controller sees all at instances of UIViewController which is the superclass
+// ItemDetailVC does not have a delegate, so it must be set
+// casting between a class and one of its subclasses
+
 
 // type check operator - simplified ----------------
 class Round {
