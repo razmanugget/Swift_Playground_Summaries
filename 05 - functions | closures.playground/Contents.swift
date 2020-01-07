@@ -2,8 +2,7 @@ import UIKit
 import Foundation
 
 
-// FUNCTIONS
-// ----------------------------------------------------------------------------
+// MARK: - FUNCTIONS
 
 func greetWorld0(){
    print("Hello World")

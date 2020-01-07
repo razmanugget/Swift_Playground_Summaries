@@ -285,6 +285,41 @@ SomeStructure2.someTypeMethod()
 SomeClass2.overrideableTypeMethod()
 
 
+// example with super
+class Snack {
+  var flavor: String
+  func eatIt() {
+    // code goes in here
+  }
+}
+
+class IceCream: Snack {
+   var scoops: Int
+   var isMelted: Bool
+   
+   override func eatIt() {
+      if isMelted {
+         // throwAway()
+      } else {
+         super.eatIt()        // must use super to access parent's methods
+      }
+   }
+}
+
+// real world example
+class MyViewController: UIViewController {
+  override func viewWillAppear(_ animated: Bool) {
+    // do your own stuff before super
+
+    // don’t forget to call super!
+    super.viewWillAppear(animated)
+
+    // do your own stuff after super
+  }
+}
+
+
+
 
 // SUBSCRIPTS
 // ----------------------------------------------------------------------------
