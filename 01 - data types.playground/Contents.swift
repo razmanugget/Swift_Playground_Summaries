@@ -34,7 +34,7 @@ func nada(this: NSString , that: NSString ) -> Int {
    return (1)
 }
 
-
+// test with ios push
 
 // MARK: - BOOLS
 
